@@ -1,0 +1,16 @@
+# User preferences (local only, never commit)
+.user_preferences.md
+
+# IDE
+.idea/
+*.iml
+
+# Node
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# TFW temporary working material
+/tmp/tfw/

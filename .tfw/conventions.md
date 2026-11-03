@@ -1,0 +1,1634 @@
+# TFW Conventions
+
+## 1) Purpose
+
+TFW preserves context, decisions, evidence and next actions so an authorized person or agent can
+inspect and continue work across sessions. Traces do not guarantee identical results or grant authority.
+
+## 2) Required Artifacts (project root)
+
+- **Project entry points:** `README.md`, `AGENTS.md`, and optional project-owned `KNOWLEDGE.md`
+  and `RELEASE.md`. They explain the project and route to current authority; they carry no duplicate
+  live task state.
+- **Framework core:** `.tfw/README.md`, `conventions.md`, `glossary.md`, `project_config.yaml`,
+  `VERSION`, `CHANGELOG.md`, `quickstart.md`, and `compilable_contract.md`.
+- **Canonical behavior and forms:** `.tfw/workflows/` and `.tfw/templates/`. Those directories own
+  their exact member set; this section does not duplicate it.
+- **Adapters:** `.tfw/adapters/manifest.yaml` and its declared sources/targets.
+- **Migrations:** applicable guides under `.tfw/migrations/`.
+
+## 3) Artifact Types (canonical)
+
+### Formal Full task scope and local Daily work
+
+Standard `/tfw-economics` analyzes existing returned evidence through
+`.tfw/workflows/economics.md` and default selected-adapter distribution. Standalone analysis uses
+Coordinator scope; task-bound analysis preserves its active formal Role Lock and vertical route.
+It adds no fifth role or lifecycle. Public provider/month quotes at `~/.tfw/rates` use exact-model/
+profile 30-day freshness and append-preserved history; each used basis is copied into the task.
+Prices/conditions/effective dates remain sourced; conditional API equivalents never invent bills.
+Daily remains optional and requires exact own-source binding, cumulative snapshots before each
+orderly return and final concise economics through `.tfw/economics/README.md`. Preserve selected
+forms, truthful gaps and last-good measurement without fabricated Full state/history conversion.
+Bytes/parity never prove live use.
+
+The artifact, identity/discovery, lifecycle, evidence-directory and Role Lock duties below govern
+formal Full tasks/phases selected through `tfw.task_containers`. Unqualified “every task” and “task
+directory” in those duties mean that formal corpus, not every bounded piece of project work.
+Optional [Daily Task](extensions/daily-task/SKILL.md) uses the same Goal, Value, Context, Boundaries,
+Task and selected Trace meanings outside that corpus. Its local `daily/` record follows receiving
+project rules, without mandatory Full HL/TS/ONB/RF/REVIEW, `status.md`, journal or EV. Existing
+local splits remain valid. Daily is no risk/authority exemption: before changing an active formal
+task or a reserved effect, stop that dependent action and use its existing Coordinator/authority
+route. Independent authorized preparation may proceed. Entering formal work preserves all Full
+roles, approvals, evidence and independent review; a Daily title or record cannot supply them.
+
+> See also: [glossary.md](glossary.md) for terminology, [README.md](README.md) for philosophy.
+
+### HL (High Level)
+Context/frame. Not a task — a "map of meaning".
+Format: strictly follows `.tfw/templates/HL.md`.
+
+#### HL Contract
+
+An approved HL is a contract, not a draft. Approval is the moment it freezes.
+
+| HL section | State after owner approval |
+|------------|---------------------------|
+| §1 Vision · §3 Target State (incl. §3.1, §3.2) · §4 Phases · §5 DoD · §6 DoF · §7 Principles (incl. §7.1) | 🔒 FROZEN |
+| §2 Current State · §7.2 Knowledge Citations · §8 Dependencies · §9 Risks · §10 RESEARCH Case · §11 Strategic Insights | 🟢 FREE |
+| §12 Amendment Log | 🟢 APPEND-ONLY |
+
+1. **The contract state is artifact state.** The HL header carries a `Contract` field with two values: `📝 DRAFT — not yet approved` and `🔒 FROZEN — approved by {owner} YYYY-MM-DD`. Task status tracks the pipeline; the `Contract` field tracks the artifact. They are not interchangeable.
+2. **Free sections stay free.** The Coordinator updates §2, §7.2, §8, §9, §10 and §11 from research and other returns, with no amendment proposal or verdict. Risk, hypothesis and dependency statuses must stay current.
+3. **A frozen section may not be edited.** The only channel is §12 Amendment Log: propose, resolve and record the rule-8 verdict, then apply. This includes the coordinator that authored the HL.
+4. **§12 is append-only.** Rows are never deleted, rewritten or renumbered. A refused proposal stays visible as an attempt — that visibility is the point.
+5. **The frozen unit is the declarative claim, not the section text.** Frozen at claim level: the phase set and each phase's declared outcome, §3's to-be claims, each §5 and §6 item, each §7 principle, and §1. Rewording a claim without changing it is not an amendment; changing what it commits to is.
+
+For Coordination Selection, an immutable delegation mandate is the frozen claim. `EXTEND` widens
+its scope, role coverage, reach or amendment authority; `SUPERSEDE` replaces its holder. A profile,
+binding, title or shared principal supplies attribution only and never supplies a mandate or
+amendment authority. Owner-direct activation needs no invented agent principal or delegation.
+
+6. **Deliverable lists inside an already-approved phase are free** — specifying *how* a phase meets its declared outcome is refinement. **Tripwire:** if the change cannot be accepted under §5 and §6 *as they stand at the moment of classification*, it is an amendment. Two tables decide it; no judgement call is required.
+7. **Non-substantive edits are not amendments** — typos, broken links, formatting, renumbering of free-section rows.
+8. **A verdict is a distinct, resolved act.** Chat/workflow input is evidence, never a verdict. The
+governing task/phase `status.md.owner` must be a declared human and is the root/fallback ruler. An
+owner-approved committed HL may give one directly addressable Coordinator unit an immutable,
+bounded delegation mandate and amendment grant. A principal is optional stable attribution; it
+grants nothing. Several units may share one principal, but that never merges nodes or lets a child
+consume another unit's grant. Amendment authority exists only in the exact immutable mandate cited
+by the task routing spine.
+
+For claimed delegation, each task/phase-local `dispatch` body and refs preserve actual source,
+destination and parent units, governing role/scope/channel, and the originating proposer as
+`{principal, unit}` or explicit `none`; `writer` is attribution, not an edge. Only a Coordinator unit
+on one unambiguous human-rooted path may create a child. Before work refuse an Executor source,
+unknown/repeated/competing node or parent, ancestor/task-Coordinator target, cycle, foreign scope,
+missing address, missing root authorization, or non-human/unresolved termination. Forwarding,
+transcription, restart, continuation, or a new writer never changes proposal origin.
+
+For ordinary `EXTEND`/`SUPERSEDE`, a root Coordinator may rule only a genuinely subordinate-origin,
+non-reserved proposal inside its exact immutable amendment grant and mandate. A child never inherits
+that grant. A root-unit-origin, owner-reserved, missing/ambiguous-origin, out-of-grant or
+out-of-mandate proposal routes to the human owner and remains `PROPOSED` until ruled. Before signing,
+validate unit chain, origin, grant, mandate, reservation and signer. Profile role, `accountable_to`,
+binding, title, provider, `writer`, or `on_behalf_of` supplies none of them. Owner-direct work without
+a valid delegated claim routes to the owner.
+9. **An owner-initiated frozen change is an amendment too** — one §12 row records the owner as `Proposer` and their real explicit decision. An agent's `on_behalf_of`, human binding or `accountable_to` cannot create this direct-human exception. The log's value is the record, not the gate.
+10. **A restrictive change applies on filing.** Narrowing — adding a DoF item, tightening scope, dropping a deliverable — is logged with `Type` = `RESTRICT` and verdict `✅ APPLIED — no owner verdict required`. Restrictive-free is prohibited: the classifier benefits from the label, so the log costs nothing and removes the incentive.
+11. **`Type` states relation to the baseline, never disposition.** `EXTEND` adds and the original stays in force; `SUPERSEDE` replaces; `RESTRICT` narrows. Disposition belongs in `Verdict`.
+12. **A proposal without evidence, cost and a considered alternative is not a proposal.** The burden sits on the proposer, which is what keeps declining cheap.
+
+**Contract Baseline** — a frozen contract that cannot be diffed is not frozen.
+
+13. **The approved HL is committed before the first research iteration.** An uncommitted baseline makes "frozen" permanently unverifiable.
+14. **The baseline reference is a reserved `freeze` scope word** in the commit subject, per the `[agent/task/scope/role]` grammar in §4: `[claude-code/PROJ-7/freeze/coordinator] freeze approved hl`. It applies to the **first** freeze and to every re-freeze after an approved amendment.
+15. **Recovery form:** `git log --format="%h %s"`, filtered on `^\S+ \[[^]]*/{TASK-ID}/freeze/`. Filter the subject, never the message; do not start the pattern with `/` because some shells rewrite it as a path.
+16. **No header field can name its own commit** — a commit's SHA cannot appear in its own content. The baseline lives in the commit subject, not in the file, and needs no separate registry.
+
+**Delegated authority**
+
+17. **A delegated mandate is a ceiling, never a source of new permission.** It bounds what an agent may do; it does not create what an agent may do.
+18. **No agent may widen its own grant.** Authority that can justify its own extension is not authority, it is a loop.
+19. **Delegation is never valid authority to accept a scope or budget overrun.** "I was delegated this decision" does not convert an overrun into a compliant result.
+
+**Phase HL**
+
+20. **A Phase HL is derivation-only.** It may restate master content and add execution context — files, sequencing, phase-local risks.
+21. **A Phase HL may not carry its own §1, §5, §6 or §7.** Vision, acceptance criteria, failure conditions and principles exist once, in the master HL. A Phase HL that authors them is a second, unapproved contract.
+
+### Project North Star
+
+The layer above every task HL: what the product is for, and what it must never become. Together with the
+contract baseline it is the reference set of the Purpose Check (`templates/review/judge.md` row 2a),
+and it is PV priority 0 (`glossary.md`).
+
+1. **Locus: designated section(s) of a README.** More than one location is permitted — a project whose
+   product is its own method may designate sections of both its root README and its philosophy paper.
+2. **A task HL may never be nominated.** Nominating one promotes a task contract to project authority with
+   no gate at the promotion point, and imports contract drift one level up. Supporting that locus properly
+   would need a project-level freeze mechanism, which TFW does not define.
+3. **Payload: purpose, principles and non-goals.** Non-goals are not optional. The failure mode this layer
+   exists to catch is *excess*, not opposition, and a purpose statement alone cannot detect excess.
+4. **Admission criteria.** A clause belongs here if it states what the product *is for* or *must never
+   become*. If a single task's implementation choice could satisfy or violate it, it is a principle
+   (HL §7), not a north-star clause. This is a criterion, not a size cap — a list carrying implementation
+   detail satisfies a citation requirement forever while blocking nothing.
+5. **Optional, with a declared fallback:** project north star → master HL §1 at the contract baseline. A
+   review is never blocked on a missing north star.
+6. **PV priority 0 and priority 1 may name the same file.** They are distinguished by what the section says
+   — *what we are building* versus *how we build* — never by which file holds it. Where the product is the
+   methodology, one file legitimately carries both.
+7. **Citation namespace:** `NS{n}` for north-star clauses; HL §7 keeps `P{n}`; a project principle registry
+   uses `PP{n}` (see `compilable_contract.md` §2).
+
+### RES (Research Report)
+Structured investigation artifact. Produced via Briefing → Gather → Extract → Challenge stages in `research/` subfolder.
+RES file = synthesis (Decisions, Hypotheses, HL Recommendations, Conclusion). Stage files = raw investigation.
+Created between HL and TS (pipeline) or standalone for any research.
+Format: strictly follows `.tfw/templates/RES.md`.
+
+### TS (Task Spec)
+Task definition. Always self-contained: inputs/outputs/constraints/DoD.
+Format: strictly follows `.tfw/templates/TS.md`.
+
+### RF (Result File)
+Executor-owned record of results, verification, evidence and mandatory typed observations.
+Format: strictly follows `.tfw/templates/RF.md`.
+
+### ONB (Onboarding Report)
+Structured executor report before starting: understanding, questions, risks, inconsistencies.
+The Executor owns the question, blocking reason and operational effect in the ONB. The authority
+answers by appending a task-local `gate_answer` event; the ONB cites that event and is not edited by
+another role.
+Format: strictly follows `.tfw/templates/ONB.md`.
+
+### REVIEW (Review Report)
+Formal independent Reviewer report after reviewing RF: ordered VALUE, ASSURANCE and TRACE
+assessment; per-item classification, route and Candidate effect; and one aggregate verdict.
+Format: strictly follows `.tfw/templates/REVIEW.md`.
+
+### Fact Candidates (section in RF, REVIEW, RES)
+Unqualified observations, not accepted facts. Templates own their scope and fields; publication follows
+`Knowledge qualification`. Keep only material candidates: "Would the next agent decide differently knowing this?"
+
+### Artifact-owned semantic sections
+
+Templates own exact headings, numbering and fields. Conventions fix only the distinctions that must
+survive across templates:
+
+| Concern | Stable meaning |
+|---|---|
+| Visuals | HL previews outcome and value flow; RF explains the delivered system; RES maps findings. REVIEW adds no mandatory visual. |
+| Knowledge capture | Fact Candidates report observations without promotion; Strategic Insights add interpretation and implications. |
+| Knowledge input | Knowledge Citations name the exact item and application; review verifies resolution, meaning and relevance. A resolving but absent, irrelevant or semantically different item is a discrepancy. |
+| Assurance | Verification is synthetic tool output; Evidence is observation in the intended environment. Coordinator specifies the oracle, Executor records EV, RF points to it, and Reviewer audits applicability and completeness. |
+
+Priorities 0 and 1 remain distinct even when one file contains both. Evidence uses
+`VERIFIED / DEFERRED / BLOCKED / N/A`; every formal Full task directory contains `evidence/` with a structured EV
+file, and RF references rather than duplicates it. See `.tfw/templates/evidence/EV.md`.
+
+## 4) Task Identity and Location
+
+### Where tasks live
+
+`tfw.task_containers` in `.tfw/project_config.yaml` is the ordered **active** path list.
+Create tasks in its first entry; ordinary discovery searches active paths only.
+New Full projects use `[workspace]` without a container-choice question. Existing single/custom
+choices remain valid, including `[tasks]` and `[tasks, workspace]`.
+
+Existing projects may retain history through optional `tfw.historical_containers`: a list of
+repository-relative directory paths, absent for new projects. Exact citations, initialized-project
+detection and documentation use the ordered active-plus-historical **reference union**, deduplicating
+the same resolved path without rewriting active choices. Invalid historical paths or conflicting
+whole identifiers are errors; never choose an ambiguous task by container order.
+
+Historical containers do not participate in creation or ordinary current-work selection.
+Opening history is read-only; continuation requires a separate explicit authorized act. A container
+disposition never declares a task DONE/REJECTED, creates a status, or rewrites its original evidence.
+
+```
+{container}/{YYYY}/{ID}/
+```
+
+`YYYY` is the immutable creation year; `ID` follows `Identifier` below.
+**No lifecycle state is expressed by moving a directory.** Keep the original path through closure
+or rejection to preserve references and concurrent work; live state belongs in `status.md`.
+
+The temporary exact `[workspace, tasks]` arrangement may retire empty or established historical-only
+secondary storage through [the 3.3.0 migration](migrations/3.3.0.md). Preserve live/unclear work and
+recorded keep-active decisions; list position, age and missing status are not historical disposition.
+The guide reconciles affected state before narrowing active config. All three identifier grammars
+and original paths remain readable; no task is moved, renamed, copied or relabeled.
+
+### Identifier
+
+```
+PREFIX_YYYYMMDD-HHMMSS_ABBR  the whole directory name IS the identifier
+```
+
+`PREFIX` is `tfw.task_prefix`; `ABBR` is the **acronym of the approved full title** — the
+initials of its significant words, uppercase alphanumeric: *Conflict Resistant Shared Workspace*
+→ `CRSW`; *Data Pipeline 2* → `DP2`.
+Neither field may contain `_`, so the single underscores are unambiguous separators. The timestamp is read from the system clock after the abbreviation is
+approved; it is never composed or adjusted. Task references and commit subjects carry the full identifier.
+
+**No participant reads a project-wide maximum to learn which identifier is free.** There is no
+counter, registry or allocation step. Creation performs only one exact-path existence check.
+
+The Coordinator proposes the full title and its abbreviation **together, in one exchange**; the
+owner approves both before directory creation. Never invent an abbreviation apart from its title
+or without approval. The HL header carries both **Title** and **Abbreviation**.
+
+If the full identifier already exists at creation, creation refuses and asks for a different
+owner-approved abbreviation. It never recomputes the timestamp, adds a suffix or silently
+retries: any of those would invent a different identifier from the one the exchange approved.
+When offline work later exposes two directories that normalize to one identifier, validation
+stops and names both paths.
+
+**A bare timestamp is not an identifier.** Two participants can reach the same second, so a bare
+`YYYYMMDD-HHMMSS` cannot name exactly one task and no consumer accepts one as if it did.
+
+Two historical grammars remain readable forever and are never renamed or issued again:
+
+- legacy `PREFIX-N`, optionally carried by a directory as `PREFIX-N__slug`, normalizes to
+  `PREFIX-N`;
+- legacy un-prefixed timestamp `YYYYMMDD-HHMMSS__slug` keeps its whole directory name as the identifier.
+
+### Task control files
+
+| File | What it is |
+|------|------------|
+| `{task}/status.md` | **The only authority for that task's live state and routing spine.** Closed key set, complete one-line prose fields, no free-text body. Template: `.tfw/templates/status.md` |
+| `{task}/journal/{YYYYMMDD-HHMMSS}__{kind}__{token}.md` | One event, immutable once written. The filename **is** the event identifier — nothing allocates it. Template: `.tfw/templates/journal/event.md` |
+| `{task}/{phase}/journal/…` | A phase carries its own journal, exactly as it carries its own `status.md`. Same grammar, same rules |
+| `team/{handle}.md` | One participant. Declared attribution, never authentication. Template: `.tfw/templates/team/profile.md` |
+
+Before any state/event write, open its template and validate the complete proposed carrier, not
+only the changed field: closed schema, lifecycle/outcome relation, permitted transition pair,
+clock/token, declared principal and accountable human, actual authority, and every reference.
+Resolve status authority from that status file and event refs from their owning task/phase directory;
+enforce the template's containment rules and open the actual targets. For a cited immutable object,
+verify the object and the claimed artifact at that epoch. A plausible path or SHA is not evidence.
+Refuse a missing, escaping, contradictory or unverifiable reference before writing.
+
+Read the clock and draw the event token. Write status before its actual transition event; validate
+both proposed carriers before either write. Events are append-only: a correction cites the erroneous
+event and describes the actual act using an existing truthful kind, never a same-state or invented
+transition. If no kind fits, do not invent an event; record the explanation in the existing owning
+artifact. Compatibility `actor` and erroneous history remain readable, never rewritten. Recover an
+interrupted pair through `Closing and record recovery`.
+
+### Declared participants and principals
+
+A **principal** is a stable project-local `team/{handle}.md` identity backed by a valid human or
+agent profile. Provider, model, executable, process, session, folder, hostname, account identity,
+and workflow role never define one. Do not create a profile per run or agent session.
+
+A **working unit** is a directly addressable operational node with its own workflow role, actual
+address, parent, bounded scope, direct channel and activation or dispatch trace. It is not a
+participant or principal and gets no `team/` profile. Optional shared attribution never collapses
+unit parentage, work, authority or proposal origin.
+
+Every profile requires `handle`, `name`, `type`, and `since`; the existing four-key human form stays
+valid. Optional `organization_role` and `project_role` accept a non-empty description or exact
+`not_applicable` for both profile types. Omitted means unknown or not supplied, not that a role is
+absent. These roles are descriptive context only: they never authenticate, grant permission, supply
+task scope, or change a workflow Role Lock.
+
+A `type: agent` principal additionally requires `accountable_to`, naming an existing `type: human`
+profile. Historical profiles may also carry `may_rule_amendments` as a YAML Boolean; it remains
+readable but is never issued and grants nothing. Human profiles do not carry those keys. Optional
+agent `mentality` is non-empty descriptive guidance and grants nothing. Current routing and
+amendment authority come only from the governing status and cited immutable authority object.
+
+A current event may carry optional `writer`, naming a declared human or valid agent principal. It is
+never derived from `via`, an OS/account identity, hostname, model, session, folder, or filename token.
+`on_behalf_of` still names the human accountable for the act, `via` is non-empty free-form tool text,
+and the opaque filename token supplies uniqueness only. Existing `actor` is historical input:
+accept it exactly as already written, but never require it, issue it, validate it under the current
+principal rules, remove it, or rewrite it.
+
+### Which handle a machine acts as
+
+Ordinary owner-launched work does not require, infer or invent an agent principal. Resolve a stable
+principal only when an immutable delegation mandate or an explicit attribution requirement needs
+one. A profile never activates a workflow or supplies authority.
+
+When stable attribution is required, select it from a **binding held on the participant's own
+machine**, never in this tree: `~/.tfw/bindings.yaml` on POSIX,
+`%LOCALAPPDATA%\tfw\bindings.yaml` on Windows. Template: `.tfw/templates/bindings.yaml`.
+
+```yaml
+bindings:
+  /abs/path/to/project: principal-handle
+```
+
+One project-root mapping may select a declared human or valid agent principal. The file contains
+nothing else: no authority, mentality, fallback, default, liveness, device identifier, provider
+data, or second key kind. It selects attribution and grants nothing.
+
+If stable attribution is required and the binding is absent, ambiguous or invalid, ask exactly one
+short question before the first durable write, once per session. If several humans exist and the
+owner-source itself is ambiguous, the same one-question rule selects the human source. Otherwise do
+not ask an identity question.
+
+Never infer identity from an OS username, hostname, folder, or account display. The binding selects
+which principal the session acts as; it does not prove who is present or what they may do.
+
+### Session identity
+
+Navigation-only; non-authoritative window and thread title formatting:
+
+- **Standard format**: `{WORK} · {TASK}` or `{WORK} · {TASK} · {PHASE}`
+- **WORK vocabulary**: `PLAN`, `RESEARCH`, `EXEC`, `REVIEW`, `RESUME`, `DOCS`, `INIT`.
+- **Local Daily navigation**: outside the formal Full corpus, the optional Daily skill uses
+  `DAILY · <exact immutable folder ID>` when title write/readback is available. This does not
+  enlarge the Full role vocabulary or grant workflow authority; unavailable control is disclosed.
+- **TASK**: Approved root-unique abbreviation (e.g. `CMTR`) or full task ID.
+- **PHASE**: Uppercase phase token (e.g. `PHASE-A`) when applicable; omit if single-phase or ambiguous.
+- A Coordinator uses `PLAN · {TASK}` for task scope or `PLAN · {TASK} · {PHASE}` for phase scope. `COORD · TASK` and `COORD · TASK · PHASE-A` may describe navigation in a provider that supports role labels; neither changes the Role Lock.
+- Historical `GATEWAY` and `LEAD` titles remain readable at their original epochs; never issue them for new work.
+
+Examples:
+- `PLAN · CMTR`
+- `EXEC · CMTR · PHASE-A`
+- `REVIEW · CMTR · PHASE-A`
+
+Never guess fields, and never use emojis, hyphens, pipes, or ordinals as separators. Navigation titles grant no identity, authority, mandate, or permissions.
+
+### Artifact file naming
+
+| Artifact | Format | Example |
+|----------|--------|---------|
+| Master HL | `HL-{ID}.md` | `HL-TFW_20260829-172110_ABT.md` |
+| Phase HL | `HL__phase-{x}__{phase_slug}.md` | `HL__phase-a__data_model.md` |
+| Single-phase TS / ONB / RF / REVIEW | `{TYPE}__{ID}.md` | `TS__TFW_20260829-172110_ABT.md` |
+| Single-phase EV | `evidence/EV__{ID}.md` | `evidence/EV__TFW_20260829-172110_ABT.md` |
+| Phase TS / ONB / RF / REVIEW | `{TYPE}__phase-{x}__{phase_slug}.md` | `TS__phase-a__data_model.md` |
+| Phase EV | `evidence/EV__phase-{x}__{phase_slug}.md` | `evidence/EV__phase-a__data_model.md` |
+| Research synthesis | `research/iter{N}/RES.md` | `research/iter2/RES.md` |
+| Single-phase TS revision | `TS__{ID}__rev{N}.md` | `TS__TFW_20260829-172110_ABT__rev2.md` |
+| Single-phase REVIEW revision | `REVIEW__{ID}__rev{N}.md` | `REVIEW__TFW_20260829-172110_ABT__rev2.md` |
+| Phase TS revision | `TS__phase-{x}__{phase_slug}__rev{N}.md` | `TS__phase-a__data_model__rev2.md` |
+| Phase REVIEW revision | `REVIEW__phase-{x}__{phase_slug}__rev{N}.md` | `REVIEW__phase-a__data_model__rev2.md` |
+
+At a current write gate, first select task topology, then artifact type, then revision behavior. `{ID}`
+is the exact task identifier. `{x}` is the selected `phase-{x}` directory token. `{phase_slug}` is
+derived once from the selected phase `status.md.title`: remove an exact leading `Phase {X}:`, apply
+Unicode NFKC case-folding, replace each non-alphanumeric run with `_`, and trim `_`; an empty result
+is invalid. A current producer emits the one matching row and refuses any other new name. Research
+stage files use their fixed names inside `research/iter{N}/`; their owning path supplies identity.
+
+**`{ID}` is the same whole identifier in paths, filenames, references and `status.md`.** Never append
+a title or second slug; the title belongs in `status.md` and the HL header. Historical clock-task
+and legacy artifact names remain readable exactly as stored and are never renamed. Their examples
+or citations do not authorize new historical-form artifacts; current issuance uses the table above.
+
+#### The revision suffix, and what it generates
+
+`__rev{N}` is the only admitted suffix and identifies a repair round ordered after 🔄 REVISE (§5).
+The unsuffixed artifact is revision 1 and is never renamed. Revisions are immutable siblings:
+each new governing artifact names its predecessor and governing source, and consumers choose the
+highest valid lineage. Cumulative records append rather than overwrite.
+
+| Artifact | Form | Why |
+|---|---|---|
+| **TS** | **sibling** | Exactly one order is in force, and the highest ordinal is it |
+| **REVIEW** | **sibling** | Exactly one verdict is live, and the highest ordinal is it |
+| **RF** | **appended** — one new numbered subsection per round, in every section the round touches | The result record is cumulative and earlier results remain openable |
+| **ONB** | **appended, never a sibling** | Each entry extends the executor's recorded understanding; one ONB file per task |
+| **EV** | **appended** — a round's rows beside the earlier round's | Earlier verification remains part of the cumulative evidence |
+
+**A live revision is amended in place and says so in its header; a superseded one is never touched.** The
+never-edited rule protects history, not the order currently in force — an order that cannot absorb a
+correction is an order nobody can raise a question against.
+
+> **Rule:** every current primary artifact at a task/phase root includes the task ID or phase
+> identifier. Fixed-name stage artifacts such as `research/iterN/RES.md` and `review/map.md` are
+> identified by their owning task/phase path and are not competing primary-artifact grammars.
+
+### Discovery
+
+Task-local carriers are the discovery source. Resolve an exact cited whole identifier through
+the reference union; ordinary current-work discovery uses only `tfw.task_containers`. Accept the
+current and two historical grammars above. A
+workflow acting on a task reads that task's `status.md` directly; a phase reads its own
+carrier. Never select by prefix, timestamp fragment, title, or a generated summary.
+
+Enumerating the corpus is optional. When an explicitly requested read-only projection does
+so, it must report malformed, duplicate, missing, stateless, and unreadable inputs rather
+than infer or drop them. Such output is disposable, non-authoritative, and never a lifecycle
+or build gate. A human may approve a rename; readers never normalize one. Generated docs may
+create one hidden landing per recognized task solely to keep direct links resolvable, but no
+public task catalogue or default current-status page follows from that infrastructure.
+
+Full ships no executable needed for ordinary lifecycle, dependency, portfolio cache, or
+freshness duty. The narrow owner-approved task-economics exception ships
+`.tfw/economics/tfw_economics.py` as an optional standard-library collector/validator/
+reporter with the complete readable contract in `.tfw/economics/README.md`. Status,
+coordination, review and the Knowledge Gate remain usable without Python or PyYAML.
+The upstream repository may keep other optional maintainer tools outside `.tfw/`;
+they are not copied by init/update and hold no authority over receiver state.
+
+### A major release ships a migration guide
+
+Version-addressed guides live at `.tfw/migrations/{version}.md`; `update.md` follows every applicable
+guide named by the pinned changelog, including minor/patch and equal-version recovery obligations.
+Crossing a major also requires its `{major}.0.0.md` guide. **A major release without one is incomplete.** Prose inside a CHANGELOG that
+documents the framework repository's *own* migration is a record, not a procedure: it names
+that repository's paths, counts and decisions, and a receiving project cannot follow it.
+
+The guide is written for a project that is not this one, and it states its ordering
+constraints where a reader is about to violate them rather than in a summary.
+
+### Commit Attribution
+
+Every AI-authored commit MUST use `[agent/task/scope/role] summary`: set `agent` to the lowercase AI product name from explicit context, `task` to the canonical TFW task ID (`project` only when none exists), `scope` to the established lowercase work-slice slug or a lowercase hyphenated form of its explicit label, and `role` to the lowercase canonical TFW workflow owner from §15/Role Lock; keep `summary` short and imperative, commit locally, and push only after explicit user approval.
+
+Example: `[codex/TFW-50/task/coordinator] define minimal commit attribution`
+
+### Worktrees for concurrent mutation
+
+A delegated run that may mutate the repository uses its own Git worktree unless the selected
+provider route explicitly requires one shared local checkout. A read-only run may share the current
+checkout because it contends for no writes and creates no landing obligation. On an authorized
+shared-checkout route, one active mutation owner serializes writes and exact-path commits; conflicting
+phase work waits. Independent review uses a fixed reachable Candidate while Executor mutation stops.
+
+| Property | Rule |
+|---|---|
+| Location | Outside the project tree, per machine: `~/.tfw/worktrees/{TASK-ID}__{phase}/` on POSIX; `%LOCALAPPDATA%\tfw\worktrees\{TASK-ID}__{phase}\` on Windows. A provider-created or other foreign worktree stays where it is and is read, never renamed into this layout |
+| Name | `{TASK-ID}__{phase}`, extensible to `{TASK-ID}__{phase}__{principal}` once the principal exists. An established name is never changed because existing references must keep resolving |
+| Landing | Only after the run's role artifact exists and review has run. This lifecycle point selects no branch, merge, or other transport strategy |
+| Removal | The coordinator removes the tree only after landing and verification, including reachability of the exact TS-fixed Candidate when one exists |
+| Dead run | Read its tree and land its commits before removal. Session death never authorizes deletion |
+
+A worktree isolates files and the Git index. It is not a lock, does not serialize writers, and does
+not define a merge strategy; one mutation owner controls each worktree.
+
+### Exact-path staging
+
+Before every commit, read the complete `git status` and the staged name set with
+`git diff --cached --name-only`. Stage only explicit full pathspecs. `git add -A`, `git add .`, and
+`git commit -a` are forbidden for shared-tree work; `git commit --only -- <paths>` prevents an
+already-staged sibling path from riding along. Preserve unrelated dirty work without normalizing or
+repairing it. If a selected path contains an inseparable foreign hunk, STOP and report the overlap.
+
+### Trace boundary and selected siblings
+
+A task-local trace is selected by an exact path and a governing artifact, not by a broad directory
+scan. A selected stable uncommitted sibling trace may be used only when the governing TS or RF names its
+exact path, the producer task/phase, parent/child relationship, and the semantic effect it supplies.
+The receiver records the path and commit or working-tree state in EV/RF; it never treats a sibling's
+`DONE` state as a prerequisite. Incidental traces remain append-only evidence and do not become new
+VALUE scope, new authority, or a second copy of the result.
+
+### Release and update records
+
+`RELEASE.md` is optional project-owned release context. The release workflow is a router: when the
+project has no release contract, it records that no release action is due; it does not invent a
+universal versioning or publication policy. An update receipt is an immutable attempt record, not a
+state registry. It records the pinned source, authority, semantic decisions, applied/skipped/refused
+effects, preservation references, verification, and next action. It never stores credentials or
+replaces the receiver's own task state.
+
+### Landing a deliverable across sessions
+
+When one session lands another's deliverable, give it a separate commit whose subject names the
+producer's task and phase and whose `role` names the acting landing role. When the producer's TS
+fixes a Candidate, that exact commit remains reachable after landing and before worktree removal;
+recreating equivalent bytes under only a new SHA is not equivalent evidence.
+
+### Research subfolder
+
+Research artifacts live in a single `research/` container at task root. Each iteration gets its own numbered subfolder:
+
+```
+{task}/research/
+  iterations.yaml              ← control file
+  iter{N}/
+    1_briefing.md              ← numbered stage files
+    2_gather.md
+    3_extract.md
+    4_challenge.md
+    RES.md                     ← synthesis co-located with stages
+```
+
+Stage formats belong to `.tfw/templates/research/`; resume and completion follow
+`research/base.md` and its stage checkpoints.
+
+#### Multi-iteration research
+
+**Trace rule:** Each `research/iter{N}/` has its own stages and RES. Iterations accumulate;
+never delete or overwrite a previous iteration's files.
+
+**Control file:** `research/iterations.yaml` tracks iteration state. The Coordinator creates and fully
+prepares it in `plan.md` Step 7 before the first research dispatch. Format:
+
+```yaml
+task_id: PROJ-N
+title: research focus description
+min_iterations: 2       # from tfw.research.min_iterations or coordinator override
+max_iterations: 5       # soft ceiling
+iterations:
+  - number: 1
+    focus: "initial investigation of H1-H3"
+    hypotheses: [H1, H2, H3]
+    status: complete     # pending | in_progress | complete
+    res_file: research/iter1/RES.md
+    # agent: antigravity           # optional — which tool/agent ran this iteration
+    # sources: [external, codebase] # optional — what sources were consulted
+  - number: 2
+    focus: "deepen findings from iter 1, test H4"
+    hypotheses: [H4]
+    status: pending
+    res_file: research/iter2/RES.md
+```
+
+The `agent` field records which tool or agent conducted the iteration — for traceability, not dispatch. The `sources` field records what source categories were consulted. Both fields are optional; simple single-agent tasks can omit them.
+
+The Coordinator alone updates `research/iterations.yaml`: after each durable return it marks the
+current entry complete and, when another iteration is justified, adds a fully prepared pending entry
+with its focus and hypotheses before dispatch. The Researcher reads it for predecessor context and
+assigned hypotheses; the Researcher never creates or edits the control file.
+
+
+### Review subfolder
+
+`review/map.md`, `review/verify.md` and `review/judge.md` live in the selected task or phase.
+REVIEW synthesizes them; `.tfw/templates/review/` owns their formats.
+
+### Evidence subfolder
+
+Every formal Full task directory (or phase directory for multi-phase tasks) MUST contain an `evidence/` subfolder. The subfolder always contains at least one structured EV file (`EV__{ID}.md` or `EV__phase-{x}__{phase_slug}.md`). It holds nothing else — no attachments, binaries, logs, archives or copies, however small: each EV row carries what was verified, how (command or action and the Candidate commit or live target), what was observed and the result. Template: `.tfw/templates/evidence/EV.md`.
+
+### Multi-phase folder structure
+
+For multi-phase tasks, master HL and `research/` stay at task root. Each phase gets a subfolder:
+
+```
+{container}/2026/PROJ_20260826-143000_QR/
+  status.md                           ← Live state — the authority for this task
+  journal/                            ← One immutable file per event
+    20260826-143000__created__a71c.md
+    20260901-091500__handoff__b0f2.md
+  HL-PROJ_20260826-143000_QR.md          ← Master HL
+  research/                           ← Master research (if any)
+  phase-a/
+    HL__phase-a__data_model.md
+    TS__phase-a__data_model.md
+    ONB__phase-a__data_model.md
+    RF__phase-a__data_model.md
+    REVIEW__phase-a__data_model.md
+    evidence/                         ← Mandatory evidence folder
+      EV__phase-a__data_model.md      ← Structured evidence file
+  phase-b/
+    HL__phase-b__api_layer.md
+    ...
+```
+
+## 5) Task Statuses
+
+```
+⬜ TODO → 📝 HL_DRAFT → 🔬 RES → 🟡 TS_DRAFT → 🟠 ONB → 🟢 RF → 🔍 REV → 📚 KNW → ✅ DONE
+   multi-phase:  ⬜ TODO → 📝 HL_DRAFT → 🔬 RES → 🧩 PHASES → 📚 KNW → ✅ DONE   (each phase runs the full flow in its own status.md)
+                                                                              │
+                                                                    ┌─────────┴─────────┐
+                                                                    🔄 REVISE          ❌ REJECT
+                                                                (routed by rung)  (user decides)
+                    (skip: 📝 HL_DRAFT ··· 🟡 TS_DRAFT)        ↓
+                                                           ❌ BLOCKED
+
+  from any status ──→ ❌ REJECTED     terminal · no edge leads out · the trace is kept
+```
+
+| Status | Meaning |
+|--------|---------|
+| ⬜ TODO | Task planned, HL not started |
+| 📝 HL_DRAFT | HL being drafted, awaiting review/approval |
+| 🔬 RES | Research in progress (optional — user can skip to TS_DRAFT) |
+| 🧩 PHASES | The task is multi-phase and its phases are running. **A task-level rollup of phase state is prohibited** — each phase carries its own `status.md`, and a summary would be a second fact that must agree with them |
+| 🟡 TS_DRAFT | TS written, awaiting approval for execution |
+| 🟠 ONB | Executor onboarding and implementation until RF |
+| 🟢 RF | Execution complete, RF written |
+| 🔍 REV | Review: reviewer checking RF |
+| 📚 KNW | Coordinator completes applicable capture and final-effect acceptance under Closing and record recovery |
+| ✅ DONE | Final accepted effects and complete control records checked; task closed |
+| ❌ BLOCKED | Blocked by dependency |
+| ❌ REJECTED | Unsuccessful terminal closure; preserve the task and its traces. Unlike BLOCKED, it cannot resume. Distinct from review verdict REJECT and HL amendment verdict REJECTED, neither of which is a terminal task state |
+
+Status lives only in the task's own `status.md`. Its lifecycle is one of the ids above or
+`UNDECLARED` carrying the source value verbatim (→ glossary.md).
+
+New statuses carry seven routing/selection fields: four shared fields, one upward route, and the selection pair.
+
+- `coordinator_route`: one quoted, non-empty native address for the unit that receives every
+  workflow status change, question, gate and durable return;
+- `upstream_route`: `owner:{human-handle}` for a task Coordinator or `coordinator:{native-address}` for a phase Coordinator;
+- `dialogue`: `tfw-gates-only` or `iterative`;
+- `activation`: `owner-only` or `delegated:{immutable-mandate-ref}`;
+- `coordination_authority`: one quoted exact local authority reference plus immutable epoch.
+
+The shared fields are `coordinator_route`, `dialogue`, `activation` and
+`coordination_authority`. Exactly one upward-route name is allowed: `upstream_route` for new
+writes or historical `owner_gateway` for existing carriers. The field set is closed. Total absence
+is legacy-readable but cannot activate new work; missing, partial or both-name spines refuse.
+New writers emit all seven current fields. `coordinator_route` receives lower-role returns;
+`upstream_route` carries only the Coordinator's upward decisions and phase-level return. For a
+task, its `owner:` handle must match `owner`; for a phase, the `coordinator:` address must match
+the actual governing task Coordinator and differ from its local `coordinator_route`. A missing,
+unknown or wrong parent refuses. Concurrent phases keep separate local routes.
+
+Two current-selection fields extend a complete spine on every new write:
+
+- `reporting`: `native-gates` (required vertical sends and durable returns) or `owner-transfer`
+  (an explicitly selected fully manual transfer; role artifacts and reserved decisions remain);
+- `selection_ref`: `baseline` for the validated initial human choice under the exact frozen
+  `coordination_authority`, or `journal/<coordination_selected event>.md @ <full commit>` for an
+  effective subsequent owner choice. A phase may use only its exact governing ancestor task's
+  `../journal/` event when that immutable event explicitly covers the phase and roles.
+
+The pair is all-or-none. A complete old five-field `owner_gateway` carrier, with or without the
+selection pair, remains readable under its actual authority; it is never silently rewritten or
+reparented. Before a live migration, verify a safe checkpoint, exact new recipient and immutable
+selection source, then change the carrier truthfully without inventing a same-state event. No
+coordination fields means legacy read-only. Missing or unverifiable source blocks dependent new
+authority, not historical readability. Phase permission comes from phase status, not continuous
+root live-state consultation.
+
+`coordination_selected` is one append-only, task-local event for an actual human operating choice.
+Its body preserves the answer source, prior and selected values, exact scope/roles, reservations,
+effect `now` or named checkpoint, and revocation/continuation consequences. `on_behalf_of` alone
+does not prove owner approval. Commit the event before its SHA enters an effective status
+`selection_ref`; a pending event does not change status. At adoption check object, content, actual
+human source, phase lineage and HL ceiling. No parallel replay-derived state or routine HL amendment
+is needed for a selection within that ceiling. A revocation stops new delegated launches and returns
+active work at a safe boundary; inability to deliver the notice remains an open action, never a
+claimed remote halt. A non-revoking switch preserves prior valid activation, units and pending gates.
+
+**`UNDECLARED`: migration never normalizes; an accountable owner may resolve.**
+
+| Act | Permitted |
+|---|---|
+| A tool rewriting `UNDECLARED` to a declared value | **Never.** It has no basis for the choice, and the rewrite is silent |
+| The task's owner setting the correct value and recording a `transition` event with `from: UNDECLARED` | **Yes.** The accountable decision and its trace are explicit |
+
+The same rule governs rejected directory names (→ Discovery): tooling reports; a person may
+resolve; the resolution leaves a record.
+
+### A phase carries its own state
+
+A phase owns its `status.md` and `journal/`; create both only with the phase. The task-level
+`lifecycle` never summarizes phase state. The task file describes only this arc:
+
+```
+TODO → HL_DRAFT → RES → 🧩 PHASES → KNW → DONE
+```
+
+While `PHASES` stands, read each phase's state. Every phase consumer reads that local state and
+journal before acting. A transition is two ordered acts: write the authoritative task/phase
+`status.md`, then append its journal event.
+
+Review verdicts:
+- ✅ **APPROVE** — no material finding remains → 📚 KNW; return to Coordinator for `Closing and
+  record recovery`. Visible non-material TRACE observations and finite current-carrier repairs may
+  coexist with APPROVE, but an owed disposition still keeps close open
+- 🔄 **REVISE** — specific complete material findings → the Reviewer proposes and stops; the Coordinator rules
+  once, then follows **The 🔄 REVISE route** below. The verdict alone never moves lifecycle
+- ❌ **REJECT** → 🛑 User decides: (a) 📝 HL_DRAFT (rework HL), (b) 🔬 RES (new research), (c) 🟡 TS_DRAFT (rewrite TS)
+
+> Branch (a) does not thaw a 🔒 FROZEN HL. It reopens free sections; frozen claims still use
+> the §12 amendment channel in §3.
+
+### Closing and record recovery
+
+For participating new or continued task-bound Full units, apply the common
+`.tfw/economics/README.md` contract at activation/resumption and orderly return.
+Each Researcher, Executor, Reviewer and task/phase Coordinator may write only
+its own task-local numeric JSONL, typed capture-failure receipt or attributable
+pre-extraction binding-gap disposition in its existing artifact as TRACE under
+that common contract, without crossing its Role Lock. At activation the unit resolves
+native source, task/phase, role, working-unit address, declared owner, range and timezone;
+unavailable required binding uses the common prose disposition. With known binding it
+validates its own file and returns actual bytes/revision/hash through the normal vertical
+result route. A correction or resumed bound range is a new
+revision or disjoint contribution, never an overwrite of another producer.
+An ordinary intermediate chat reply needs no new file. Taskless adapter
+maintenance mints no fictional task. Already completed historical tasks are
+not retrospectively noncompliant. The Coordinator checks expected units from
+actual dispatch/return lineage, reads received bytes, diagnoses missing,
+failure-only, overlapping and conflicting coverage, and counts unique
+underlying rows once. A remote path alone is not receipt. Missing/unreadable
+returns keep reconciliation incomplete. A readable binding-gap disposition or
+valid failure receipt completes ordinary collection accountability, not measurement;
+the Coordinator reads Full prose gaps separately from the helper's numeric receipts.
+Optional unsupported metrics and the disclosed short final tail do not block an otherwise
+accepted result. Explicit measurement deliverables and required product proof retain their gates.
+
+The existing authorized **Coordinator** owns closing a selected task or phase. Use this contract
+directly; Plan's selected-return route exposes it and stops. No new task, bootstrap, phase matrix or phase-choice
+question is required for an already selected close. This route grants no missing mandate or scope.
+Read that task/phase's state and journal, its governing authority and live REVIEW, then the referenced
+RF/evidence and actual capture or landing effects needed for the claim.
+
+**Close after checked final effects.** The independent APPROVE is an input, not a terminal write:
+
+1. Inspect actual contributor/dispatch/return lineage through `Knowledge handover`; read each
+   material source and completed disposition. Missing producers, unavailable acceptance-critical
+   context and owed publication/resolution keep this selected close nonterminal. An empty file,
+   unchecked marker or another producer's return cannot cover a missing contribution. Unrelated
+   historical changes and justified non-obligations create no global queue.
+   Rule REVIEW §5 dispositions once under existing authority. Complete applicable `/tfw-docs` and
+   `/tfw-knowledge` through their existing owners and gates. Both Applied/N/A markers must describe
+   actual effects and an N/A states its source-based reason; Deferred and pending keep the task open.
+2. Identify which accepted outputs or claims those effects changed. Reuse evidence only where its
+   relevant inputs/output, oracle or authority, and environment assumptions still apply. An enclosing
+   SHA, unrelated TODO, or record repair alone invalidates no unaffected claim. A changed dependency
+   or insufficient evidence requires the affected check; a file's TRACE/ASSURANCE label proves nothing.
+3. The separate Reviewer independently assesses changed final claims and their evidence. The
+   Coordinator cannot independently accept its own material output. Record a bounded follow-up in
+   existing evidence/REVIEW sections; its recording alone starts no full stage restart, formal
+   revision, repeated capture or new knowledge candidate. A real cited defect still follows
+   `The 🔄 REVISE route` with the same holders; missing authority or uncertain acceptance stops close.
+4. Preserve one truthful task-attributed entry in the project's selected changelog; a log entry is
+   no release, version, tag, push or publication authority. Confirm accepted Candidate reachability,
+   landing when selected, and every task-owned resource's exact ownership, use and safe disposition.
+   Preserve sources and resources needed for final economics collection/reporting. Archive finished
+   child sessions only after durable return and last correction, and only when their sources are no
+   longer needed. A retained resource needs a specific reason; pending cleanup names its actor/action.
+5. Reconcile actual received economic contributions, including the Coordinator's bounded own
+   contribution; prepare the task/phase economics.md basis and link its purpose/value to status/HL
+   and accepted change to RF/REVIEW. Use one primary product area and 3–5 product keywords at
+   close. Report distinct token, compatible time and dated API-reference money meanings, missing
+   coverage beside the estimate. Apply the common semantic cycle endpoint: final role returns,
+   then Coordinator integration/close capture after relevant results/checks and before final
+   delivery. Label unfinished-cycle estimates interim. Do not add a parent report to phase leaves or fabricate an
+   unavailable metric. Validate complete status/event carriers through `Task control files`.
+   Only then write DONE with its actual outcome and append the real transition.
+6. After DONE, save and present the durable final economics.md and concise owner-facing
+   purpose/change/value/cost result. Then perform safe final disposal of task-owned
+   disposable worktrees/branches, processes, containers and temporary files whose accepted
+   work and source returns are preserved. Shared checkouts, persistent gateways, sole
+   results and unrelated resources stay. Record completed, retained or pending cleanup
+   truthfully; DONE never asserts deletion succeeded. Archive alone does not remove disk
+   state. Final delivery, short later exchanges and safe cleanup are one disclosed excluded
+   tail; substantive reopening is separately bounded. No recursive recapture follows. Closing
+   authorizes no external effect.
+
+Record the material grounds once in REVIEW §6: actual capture effects, final accepted output identity,
+applicable evidence and independent judgment, dispositions and any remaining effect. N/A needs its
+reason. Economics.md is a derived report, not a new closing authority, registry or mandatory
+executable; receiving projects
+use their own checks. If a material failure blocks KNW, record that actual BLOCKED dependency and
+route the cited condition. After the existing ruler supplies an executable bound, return from BLOCKED
+to the rung table's required state; never fabricate a direct KNW-to-ONB edge or an acceptance.
+
+**Repair only the record.** A missing outcome, malformed current carrier or interrupted status/event
+pair is administrative only when the accepted result, oracle, authority and relevant dependencies
+are reconstructably unchanged. Check the actual outputs, prior acceptance and lineage first. Repair
+the current carrier, preserve original event bytes and reference the error in the existing record.
+Append only a truthful current act, with the current clock; do not invent the missing past event or
+timestamp, repeat a completed transition, or infer execution from an intended state. If status was
+written and the event was not, reconstruct what actually occurred before recording the present recovery.
+
+Immediately before a repair, compare the affected current fields with preserved old/intended
+values and their actual source/authority. A third value refuses the affected write; preserve it
+and unrelated later work, naming the exact conflict and authoritative next action. Never roll back
+a whole file/map/tree. A missing past event is not a reason to invent a timestamp or transition.
+Validate the repaired carrier and its references, then **stop**. Repair alone creates no product work,
+TS revision, Candidate, formal review round, Fact Candidate or knowledge/capture cycle. Unknown or
+fabricated SHA/acceptance, changed authority, material output change or uncertain lineage cannot use
+this branch. Preserve the honest nonterminal state or report the contradictory terminal carrier and
+route the exact gap; never silently normalize it. REJECTED stays terminal and only the accountable
+owner may resolve UNDECLARED. A genuine new defect uses its existing authority route, not record repair.
+
+#### The 🔄 REVISE route
+
+A finding, not an artifact, discrepancy or round, is the unit of review. Before routing, classify
+each item as VALUE, ASSURANCE or TRACE and record its affected accepted claim/authority, fact and
+oracle, harm, material consequence, owner, observable completion, route/rung and Candidate effect.
+A breached criterion, citation, count or process record alone cannot change the verdict.
+
+VALUE defects use the product/specification rungs below. ASSURANCE-only gaps target the missing
+proof or guard and preserve an independently established Candidate. Material TRACE defects use the
+exact acceptance authority or accepted-result identity ruler. Non-material TRACE stays visible as
+an observation or finite current-carrier repair and neither restarts product execution nor moves the
+Candidate. The highest required authority sequences only the next act in a mixed round; it never
+reclassifies another item, drags unchanged VALUE into repair or changes another item's Candidate
+effect. One REVIEW may mix all classes without a second verdict or blanket re-audit.
+
+A rung belongs to one material item. The table is the single routing authority. `live REVIEW` means
+the existing REVIEW while it remains the current verdict artifact; recording a Coordinator ruling
+there is acceptance control, not a new implementation order.
+
+| Case | Fix boundary | Recipient after Reviewer | Coordinator ruling site | Governing execution artifact | Lifecycle after REVIEW → after Executor acceptance | Exact hard stop |
+|---|---|---|---|---|---|---|
+| Rung 1 only | inside the approved TS | Coordinator for one ruling act, then the same Executor | ruled bound appended to the live REVIEW; no TS sibling | existing approved TS is the implementation order; ruled live REVIEW bounds the return | `RF → ONB` only when the Executor accepts | Reviewer → Coordinator; Coordinator → `/tfw-handoff`; Executor → `/tfw-review` |
+| Any rung 2 | the TS | Coordinator, then the same Executor | one TS revision for the whole round | highest approved TS revision | `TS_DRAFT → ONB` when the Executor accepts | Reviewer → Coordinator; Coordinator → `/tfw-handoff`; Executor → `/tfw-review` |
+| Rung 3 | a frozen HL claim | Coordinator, then `HL Contract` rule-8 ruler | HL §12 proposal plus `amendment_escalated` event and resolved ruler's terminal verdict | none until that verdict leaves an executable bound | unchanged; Executor is not dispatchable | Reviewer → Coordinator → resolved ruler; **STOP until terminal verdict** |
+| Mixed rung 1 + 2 | approved implementation plus TS change | Coordinator, then the same Executor | one TS revision containing the complete ruled round | highest approved TS revision | `TS_DRAFT → ONB` when the Executor accepts | Reviewer → Coordinator; Coordinator → `/tfw-handoff`; Executor → `/tfw-review` |
+
+A REVISE item supplies the complete finding grammar above. The Reviewer proposes and stops. The
+Coordinator rules every proposal once: a rung-1-only round is closed in the live REVIEW; any rung-2
+VALUE item produces one TS sibling for the executable VALUE round; rung 3 uses rule 8 and forbids
+Executor dispatch until its valid terminal verdict leaves an executable bound. The Executor appends
+ONB, RF and EV round content, and the Reviewer verifies the affected return. No complete material
+condition means no round: approve with the remainder disposed, or transition to `BLOCKED` and return
+to the task owner because no basis can be stated. An `unassigned` owner is a hard stop. A fresh role
+holder resolves lineage from state/artifact references.
+
+## 6) Scope Budgets (per Phase)
+
+> Configured in `.tfw/project_config.yaml` (`tfw.scope_budgets`).
+> Values below are project-owned defaults. `/tfw-config` changes them and their registered inline
+> copies together; `/tfw-update` preserves them.
+
+### Semantic value-bearing classification
+
+Budget the accepted **value-bearing surface**; classify paths by purpose:
+
+| Class | Default meaning | Spends the delivery budget? |
+|---|---|---:|
+| `VALUE` | Accepted output or its necessary constituent | Yes |
+| `ASSURANCE` | Ordinary tests/checks/fixtures | No; yes only when assurance is the accepted product |
+| `TRACE` | Lifecycle, decision, review, evidence, and log records; raw run logs are working material, never in the repository | Never |
+| `DERIVED` | Reproducible output not independently accepted | No; yes when that output is accepted |
+
+| Examples | Class |
+|---|---|
+| code; shipped prompts; accepted documents; accepted presentations; accepted data; accepted generated final outputs | `VALUE` |
+| ordinary tests | `ASSURANCE` |
+| conformance-as-product; task-folder deliverables; TFW-looking product sources | `VALUE` |
+
+| Ambiguity rule | Requirement |
+|---|---|
+| Precedence | Accepted/necessary; whole fixed Baseline→Candidate diff if roles inseparable |
+| Narrower selector | Deterministic, replayable, and declared before work |
+| Line subtraction | No freehand line subtraction |
+
+Location/name never decide. Phase attribution is separate: shared work uses
+distinct immutable phase Candidates, assigns the whole delta to one phase with a dependency, or reports
+exact phase enforcement as `INVALID`. Never double count. Exclusion waives no gate and creates no shadow budget.
+
+### Value-bearing accounting contract
+
+Approved TS fixes subject, Baseline, Candidate rule, class/reason selector, measures, plan, triggers,
+M1–M6, and rulings. Candidate is the first tested immutable Executor VALUE+ASSURANCE commit before
+EV/RF/REVIEW/final transition.
+Excluded-only writes do not move it; later VALUE requires replacement and recomputation.
+
+RF binds result/deviations/decision; one EV row reproduces it; REVIEW reruns without supplying authority
+or totals. Missing/mutable/mismatched/late is `BLOCKED`; metric-only inapplicability is `N/A`;
+`DEFERRED` is not terminal.
+
+The universal measures are exactly these two:
+
+| Measure | Default | Config key | Definition |
+|---|---:|---|---|
+| Logical touched `VALUE` files | 50 | `decomposition_trigger_files` | Changed selector members; one rename is one |
+| Touched text LOC | 5000 | `decomposition_trigger_loc` | Numeric additions + deletions; binary/non-text is per-file `N/A` |
+
+Use immutable SHAs and TS literal VALUE paths:
+
+```powershell
+git diff --name-status --find-renames=50% -z <BASELINE_SHA> <CANDIDATE_SHA> -- $valuePaths
+git diff --numstat --find-renames=50% -z <BASELINE_SHA> <CANDIDATE_SHA> -- $valuePaths
+```
+
+CREATE, MODIFY, DELETE, and rename are actions, not measures.
+
+### Decomposition, constraints, and change authority
+
+| Parameter | Default | Config key | Definition |
+|---|---:|---|---|
+| Owner escalation multiplier | 2 | `owner_escalation_multiplier` | Delegated boundary against each immutable planned measure |
+
+Triggers are soft prompts, never quality vetoes; record cause, cost, assurance, split, authority, terminal
+verdict, and pre-work ref. Compare forecasts/Candidate with the immutable owner plan; no ruling ratchets it.
+Owner rules before work at/above multiplier or from planned zero. Below it, Coordinator may add only a
+necessary constituent while Goal, Value, outputs, AC, DoF, phase/ownership, architecture/target,
+interfaces, data, security, trust, and authority stay fixed. Completed work is only a deviation. Apply
+Saint-Exupéry only without damaging purpose, value, correctness, architecture, modularity,
+inspectability, or continuation.
+
+A hard constraint is valid only when its approved TS records all M1–M6 facts before work:
+
+| Fact | Required content |
+|---|---|
+| M1 — consequence | Material harm prevented |
+| M2 — protected object/risk | Exact boundary |
+| M3 — direct measure + selector | Reproducible check |
+| M4 — pre-act enforcement | Check before action |
+| M5 — softer control insufficiency | Why disclosure/review cannot prevent harm |
+| M6 — change authority | Prospective decision role |
+
+Apply by release/TS approval epoch; never reinterpret history. Migration preserves
+`max_files_per_phase`→`decomposition_trigger_files` and `max_loc`→`decomposition_trigger_loc`,
+retires the other old keys, and adds multiplier `2`.
+
+## 7) Coordination
+
+### Workflow activation and routing
+
+Provisioning creates or selects a callable unit. Activation authorizes one exact workflow run.
+Continuation resumes the same unit inside the same immutable authority and routing spine. None of
+these acts implies another. A profile, binding, title, role prompt, briefing, status token, provider
+session, source artifact, trigger, provisioned task or wait result never activates work. Navigation,
+attribution and forwarding grant no authority.
+
+A gate is a named condition governing pass, stop, routing or authority before work continues. Its
+owning workflow states the condition, who may resolve it, the required record, and what happens
+when it is met or unmet. A gate does not by itself require a message, owner approval or a pause.
+
+| Action | Condition and consequence |
+|---|---|
+| Check / Self-check | The current role verifies a condition under existing authority. Success continues locally; failure follows the workflow's repair or blocking route. Mandatory checks remain mandatory. |
+| Decision gate | A required decision is absent from current authority. The owning artifact names the blocked action, deciding authority and required decision. |
+| WAIT for a decision | Do not perform the blocked act until its required durable decision validates. An empty ONB or successful check adds no wait or lifecycle state. |
+| Role return / durable return | The role-owned result and required status/event are durable, attributable and reachable by its Coordinator. A chat sentence alone is not a return. |
+| Signal | Fixed notification referring to a record; it conveys neither verdict nor substantive reasoning. READY means availability, not approval or sufficiency. |
+| Command | Exact workflow invocation whose receiver independently validates source, scope and authority; it cannot supply missing authority. |
+| End this role invocation | The current act ends; that unit cannot enter another role. Its Coordinator may continue the authorized chain and reuse the unit for corrections. |
+
+Workflow autonomy is the ability to complete authorized in-scope actions after valid activation;
+it is independent of dialogue policy and never removes a decision gate.
+
+Every activation supplies the exact `/tfw-*` skill, task and phase, and one lineage source. A new
+Coordinator, worker or admitted compact role receives only `/tfw-* <task[/phase]>` as its first
+message; files and native context supply the lineage source, mandate, route and scope. The source
+need not be repeated in that first message. No inherited conversation,
+briefing, wait instruction, hidden hint or second registration ceremony belongs in that message:
+
+- **owner-direct:** an accountable human starts the role workflow; no agent principal is invented;
+- **delegated:** an actual Coordinator dispatch cites the immutable delegation mandate;
+- **continuation:** the same unit cites its prior activation and still-current routing spine.
+
+Resolve a machine handle only when stable attribution is explicitly required.
+
+New-role messages contain only `/tfw-* <task[/phase]>`; continuations add only the exact required
+continuation reference. Neither carries briefings, solution hints, copied reasoning, wait prompts
+or unsolicited instructions. Dispatch preserves actual source, destination,
+parent, role/scope, native address/channel, governing status/authority and originating proposer.
+
+Before material work the unit reads the governing `status.md` and journal before derived or shared
+inputs; validates bounded scope, actual unit and parent, all current routing/selection fields, exact lifecycle
+gate, skill, role, task/phase and lineage; and records producer provenance in its role artifact. Total
+absence is legacy-readable but cannot activate current work. A partial, stale, foreign, unverifiable
+or mismatched spine, role prompt without activation, implicit latest-session lookup, relay, hidden
+helper or ambiguous address is a pre-work refusal.
+Apply the session title at the earliest valid state checkpoint, read it back where supported, report
+failure once and never treat the title as authority. The task Coordinator activates a phase
+Coordinator only within the exact delegated authority and ready-phase boundary; a title or
+provisioned unit cannot expand that boundary.
+
+An initially unknown child's native address does not block valid command-first activation. The
+creation receipt or first normal gate can bind it later; a pending client handle is not a unit
+address. Record dispatch at the actual observation epoch, without backdating or making address
+binding a second startup gate. Later sends require the exact observed address and refuse foreign
+or ambiguous destinations.
+
+With `reporting: native-gates`, `dialogue: tfw-gates-only` creates only vertical edges: every role
+unit sends status changes, questions, gates and durable returns to its own `coordinator_route`;
+the phase Coordinator sends only phase-level gates and returns to its `upstream_route`, and the task
+Coordinator uses its owner route. Peer-role and worker-to-owner material communication are
+prohibited. `owner-transfer` disables inter-agent sends only when selected by an
+actual owner decision; it presents exact durable manual returns. Manual role creation alone never
+selects owner-transfer. Autonomous gates-only advances ready authorized roles and corrections
+without another owner message, while reserved decisions still return to the owner.
+
+#### Closed message catalogue
+
+This is the single semantic owner for messages on Coordinator–Executor, Coordinator–Reviewer and
+task–phase Coordinator edges under `tfw-gates-only`. On these edges send only one catalogue form;
+put questions, findings, verdicts, reasons and next-act proposals in the referenced owned artifact.
+The recipient reads that artifact and current authority before acting. A signal neither grants
+authority nor accepts a result. Do not append prose.
+
+Researcher's existing required stage dialogue is outside this revision: its workflow, route and
+authority restrictions remain. Owner–task Coordinator discussion stays substantive. `iterative`
+still requires its separate exact grant; it is no fallback for an inconvenient catalogue.
+
+`TASK` means the exact already selected task or task/phase identifier. `REF` is one repository-relative file path, `@`, and the full immutable commit SHA identifying its bytes; paths containing spaces are enclosed in double quotes. The file holds the relevant round/item and its related authority/state/evidence references. The recipient must be able to resolve those bytes: an unreturned working tree or an arbitrary branch name does not qualify. A signal can point at an existing valid commit; it does not require an extra commit solely to send a message.
+
+| Exact permitted form | Sender → recipient; condition | Required behavior |
+|---|---|---|
+| `/tfw-plan TASK`, `/tfw-handoff TASK`, `/tfw-review TASK` | Authorized parent/owner → selected role; first activation | Exactly the command, no briefing. The new role reads its own required inputs. Research still starts with its existing exact `/tfw-research TASK` command under its unchanged workflow. |
+| `/tfw-plan TASK REF`, `/tfw-handoff TASK REF`, `/tfw-review TASK REF` | Authorized parent/owner → same selected role; continuation/control input | REF identifies the actual ruling, approved revision, returned result or authority change. Revalidate; a continuation message cannot override a revocation or act as an approval. No separate `CONTINUE`, `FIX` or `APPROVE` chat command. |
+| `ONB_READY REF` | Executor → own Coordinator; ONB has no blocking question | Required ONB/state/event are durable. Notify and continue under approved TS without waiting for an acknowledgement. |
+| `RF_READY REF` | Executor → own Coordinator; RF complete | Preserve Candidate, evidence and limitations in RF; end Executor invocation. Coordinator reads and selects the next authorized act. |
+| `REVIEW_READY REF` | Reviewer → own Coordinator; review round complete | Preserve verdict, findings, proposed routes and trace effects in REVIEW; end Reviewer invocation. Send no verdict or finding count. |
+| `PHASE_READY REF` | Phase Coordinator → task Coordinator; phase-level return ready | REF identifies the existing phase-level return/status record with its result references, disposition and remaining conditions. Never forward the worker message as a phase decision. No new return artifact is introduced. |
+| `GATE_REQUIRED REF` | Child role → own Coordinator; a required decision is missing | Write the real question/blocking condition first in an existing role-owned artifact, then signal and wait. For blocked ONB this replaces ONB_READY; do not send both for the same checkpoint. |
+| `STATE_REF REF` | Child role → own Coordinator; another workflow-required status change, or reply to the permitted status request | Read state from the existing immutable status/event. Do not narrate progress or invent a transition to justify a message. A normal ready/gate signal already covering that change needs no second STATE_REF. |
+| `STATUS_REQUEST TASK` | Immediate Coordinator → its own child; the existing one-time suspected-stall fallback | Return STATE_REF for the latest durable state, or the unavailable form below. This neither authorizes work nor requests an unfinished summary. Native wait/readback remains primary; no periodic poll or second acknowledgement. |
+| `UNAVAILABLE TARGET` | Either end of an already permitted vertical edge; the necessary reference cannot be produced/resolved or the required mechanism is unavailable | TARGET is the exact known path, REF or native mechanism name. One technical failure notification; it supplies no workflow decision or result. If a durable blocker can be recorded, prefer GATE_REQUIRED with its reference. If sending itself is unavailable, preserve pending state and use the native failure/owner route; do not claim delivery. |
+
+This closes communication acts, not every analytical or implementation action a role may take. There is no open-ended “necessary detail” suffix. Transport metadata continues to identify sender, recipient and task; do not copy a roster into each body. Exact authority and attribution stay in current task records.
+
+**Persist → signal → read → act.** Save the owned artifact and every required state/event before signalling; ensure their references agree. The recipient validates the exact artifact, producer/route, current authority and current lineage. Missing, stale, contradictory or inaccessible inputs do not permit dependent work. A signal does not replace this read or compel re-reading unrelated history.
+
+**Repeated delivery.** Sender, signal kind and REF identify one logical notification; a duplicate causes no second review, ruling, transition or dispatch. Current lineage also prevents an older result from reopening work. Reuse existing status/journal disposition, with no separate receipt registry. Retry identical bytes at most once only when the provider confirms non-application and permits that retry; ambiguous delivery remains pending. There is no `ACK` exchange. A technical notification with the same target and unchanged failure receives no repeated response loop.
+
+**Transcript isolation.** Another active unit's transcript, reasoning, tool output, terminal and
+unreturned working tree are not coordination or evidence surfaces. No role reads, tails, resumes,
+searches or reconstructs them to monitor progress, validate trust, review work, recover context or
+pre-solve that unit's task. Use only addressed TFW status/gate messages, provider status/wait signals
+and durable returns. A suspected stall permits one addressed status request; no response or missing
+return is reported as unavailable or blocked, never repaired by transcript inspection. After a
+durable return, only the named artifacts and commits become inputs at their stated evidence level.
+
+`dialogue: iterative` is valid only when an owner-approved immutable authority names exactly two peer
+units, their purpose, boundary, consolidator, durable output and stop condition. It does not require
+a special owner interface. A missing or over-broad grant refuses. A Reviewer for the result cannot
+be either peer or consolidator.
+
+**Protect the owner's context.** The task Coordinator is the owner's strategic conversation and
+the single owner of cross-phase direction, dependencies, phase readiness, reserved decisions and
+successor selection. It plans a one-phase task directly; no extra phase Coordinator is issued for
+appearance. In long work it activates a separate, bounded phase Coordinator for each ready phase.
+That phase Coordinator owns its phase TS, worker gates, independent review route and durable phase
+return, not task strategy or another phase's authority. Concurrent phases have separate local
+routes. The task Coordinator receives only phase-level decisions, material blockers, completed
+results and requested status; worker ONB progress and intermediate checks stay with the phase
+Coordinator. The owner receives only decisions, material blockers, completed results and requested
+status, while strategic discussion remains available.
+
+| Unit | Purpose and value | Owned decisions / parent | Forbidden authority |
+|---|---|---|---|
+| Human owner | Holds the goal, values and strategic judgments | Approves frozen claims, exact TS/denominator, material overruns and final acceptance; root of every mandate | No role artifact is written on the owner's behalf without the actual ruling |
+| Task Coordinator | Preserves purpose and advances the whole task | Plans the task, owns dependencies, ready phases, owner route and safe successor; parent is the human owner | Cannot write RES, ONB, RF, REVIEW or implementation, or self-approve owner reservations |
+| Phase Coordinator | Bounds long-work context and returns one coherent phase | Plans its phase, directs its own workers and returns phase-level result; parent is the recorded task Coordinator | Cannot own task strategy, sibling phases or an ancestor's mandate |
+| Researcher | Tests decision-changing uncertainty | Owns RES and research-stage traces; parent is its local Coordinator | Cannot approve architecture, TS or implementation |
+| Executor | Delivers the approved order and proof | Owns ONB, implementation, EV and RF; parent is its local Coordinator | Cannot change HL/TS, rule its own gate or judge its result |
+| Reviewer | Gives independent judgment of fixed output and purpose | Owns REVIEW and its verdict; parent is its local Coordinator | Cannot repair implementation, rule authority or replace the owner verdict |
+
+`Coordinator` remains one Role Lock; task and phase name its scope. A principal may identify who
+acts but is optional attribution. A task title, principal, provider account, host or device never
+becomes a working unit, return route or mandate.
+
+**Ready action and successor.** At each durable return the responsible Coordinator validates the
+current status, immutable mandate, dependencies, recipient and next gate. It starts the next ready
+authorized role or phase without a routine owner command. If required authority, unit, delivery or
+provider wake is absent, record the pending action, responsible actor, condition and exact owner
+decision if one is reserved; never report completion from a send receipt alone. A task Coordinator
+may hand over at a safe checkpoint after saving current authority, state, open gates and results in
+task files. It activates one exact successor Coordinator with a bounded dispatch and observed
+address. The predecessor remains the effective route until the successor acknowledges those files
+and the owner-authorized route switch is recorded. Do not silently reparent workers, replay accepted
+work, or use inherited chat as authority. If acknowledgement or delivery is ambiguous, the switch
+remains pending with its named owner. No title, principal, host, device or optional read-only checker
+supplies a route or mandate.
+
+An authority answer is an immutable task-local `gate_answer` event. It cites the governing status,
+the blocked role artifact and the exact HL or TS authority; its body identifies the answer source,
+authority epoch and operational effect. The blocked role never writes its own answer or treats chat,
+a title, a profile or hidden state as amendment authority. No role edits another role's artifact to
+answer itself.
+An answer that changes scope, acceptance, architecture, authority or an owner reservation is invalid
+as `gate_answer` and routes to a TS revision or HL §12. Missing, stale, foreign, unverifiable or
+contradictory refs keep the role blocked.
+
+All current role artifacts record the actual producer unit address, parent Coordinator route,
+activation or dispatch source, exact `coordination_authority`, and originating proposer
+`{principal, unit}` or explicit `none`. Recheck the complete spine on continuation. Shared principal
+attribution never merges units or changes authority.
+
+A role consumes prior artifacts only at their stated evidence level and does not pre-solve another
+Role Lock. Distrust alone creates no repeat-work duty: repetition cites either an explicit independent
+workflow check or a concrete contradiction/evidence gap. Record a discrepancy once in the detecting
+role's artifact and return it through that unit's own Coordinator without peer debate.
+
+### New-task startup card
+
+On a new Plan request, after identifying the request and active platform, show the owner **one
+startup card** before substantive framing, planning questions or the future-state preview. Use the
+one exact Coordinator profile selected by the active persistent adapter; a common-only adapter says
+so explicitly and makes no tailored provider offer. The card is a display contract, not a file,
+registry, authority, launch receipt or role's first message. Use the owner's language and concrete
+actions, not protocol terms as unexplained choices. Lead with the value: less launch/copying work,
+a useful owner conversation protected from operating noise, independent role judgment and retained
+control over decisions. Do not promise unattended completion while owner actions remain. The same
+TFW cycle and strategic discussion apply in every mode. Its fields must together state:
+
+1. **Available here:** active platform/surface and what it can do itself, needs the owner to click/do,
+   or cannot do. Ground this in current `provision / addressed send / wait/readback / title/readback`
+   classification (`native`, `owner-assisted`, `unavailable`); name unknowns, not a capability promise.
+2. **Who you talk to:** identify the actual task Coordinator and any proposed phase Coordinator
+   separately. The task Coordinator carries purpose, owner decisions and cross-phase strategy. For
+   one phase it also receives the role returns. For long work a phase Coordinator absorbs local
+   operating detail and returns a bounded phase result; name the resulting context cost and limits.
+3. The role sequence and return route: Coordinator plans; distinct Researcher, Executor and
+   independent Reviewer work only after their gates; roles return vertically to their own
+   Coordinator, which presents only bounded owner gates/results upward.
+   **Who starts agents** is a separate choice: owner, system, or system with an owner click, only
+   where supported and authorized. Default to owner-started work until selected otherwise. Say what
+   can advance automatically and what still waits for the owner. **Communication is on by default:**
+   required reference-only signals on the catalogue edges; substantive questions/results stay in
+   files. Research keeps its existing stage dialogue; owner discussion remains substantive. Only explicit owner-transfer makes the owner carry returns;
+   manual creation alone does not. Explain any separately granted dialogue and its exact boundary.
+4. Visible task titles and task-only grouping: use it when supported; name unavailable mechanics
+   and remaining owner actions. Distinguish known titles from names to set later.
+5. Workspace or checkout arrangement, mutation isolation and how an independent Reviewer receives
+   a fixed reachable Candidate; identify any owner action or unresolved provider limit.
+6. Who chooses model and reasoning effort at each launch, where the rationale is recorded, and
+   whether effective settings are observable. Do not invent a future setting.
+7. Exact `/tfw-* <task[/phase]>` command-only activation for each new role; no briefing or card in
+   that first message. Mark a task ID or phase not yet assigned as unknown, without inventing it.
+8. Remaining owner actions and reservations, followed by safe close: durable returns, independent
+   verdict, required owner acceptance, applicable docs/knowledge effects and the mandatory truthful
+   task changelog; include release effects only when separately authorized. Then archive and dispose
+   only of task-owned resources when safe.
+
+**Version line.** The card's first row compares the installed `.tfw/VERSION` with the newest exact
+`vX.Y.Z` tag at `tfw.upstream`; pre-release and other suffixed tags never count. It comes from one
+`git ls-remote --tags --refs <tfw.upstream>` under a limit of about 13 s set on the agent's own
+command tool, because Git has no connect limit; a tool that cannot bound time skips the call. When
+newer releases exist, the row names how many and offers `/tfw-update` now or after the current task;
+it never starts an update. A skipped or failed call, or the limit, shows the newest as `unknown` with
+the reason and blocks nothing. The upstream itself (`tfw.installed_from: "self"`) makes no call and
+no offer.
+
+The selected profile supplies platform-specific mechanics and current limitations for these fields.
+Unknown future addresses, paths, phase count, title values and settings stay explicitly unknown;
+required mechanics are not optional conveniences. Ask for the initial operating mode with the card,
+then briefly restate the selected arrangement and remaining owner actions in that same display.
+Do not turn this readback into another approval, file or registry. Map the understandable answer to
+the technical selection fields; an unclear answer requires clarification, not an inferred grant.
+The answer is an intended arrangement only. It cannot activate a role, approve HL/TS, satisfy a
+reserved owner gate or grant dialogue/delegation. At Plan Step 5 validate and record this choice
+against current capability and immutable authority; reopen it only for a material boundary change
+or an unresolved choice. Existing-task continuation retains its settled selection unless the owner
+requests a change or a relevant capability actually changes.
+
+### Launch selection
+
+The direct launcher owns this judgment: the task Coordinator for phase Coordinators or its own
+roles, each phase Coordinator for its local roles. Quality sets the floor; resources must serve the
+intended result. Before each new launch:
+
+1. **Check prerequisites:** required context, tools, native availability, authority and an exact return route. A new child's address may arrive after command-first launch; a later addressed operation requires it. If a real prerequisite is missing, do not launch; name it.
+2. **Set the quality floor** from uncertainty, dependency breadth, assurance timing and strength, and consequence/reversibility.
+3. **Choose for the work.** Name an available model, or honor an explicit scoped owner-selected model policy supported by the active surface; select reasoning effort separately where supported. Choose the least-resource option justified to meet the quality floor; assess one plausible lower-resource alternative among the controls still open. If comparison is unavailable, explain why without claiming an optimum or waiving the remaining judgment. A known suitable default may be selected; an unexplained default is not a choice. An explicit owner-selected default policy is not a claim that its underlying model is known or optimal. Reuse that decision without per-launch model questions; only a changed policy, unavailable control or concrete quality/tool gap reopens it.
+4. **Apply or resolve before launch.** Pass the selected parameters when native and authorized and record dispatch. Otherwise give the launch advice below and name the exact owner action or constraint to resolve; stop only the affected launch until resolved. Do not launch with substituted settings and repair them afterward. Reuse an applicable explicit owner decision without asking again. Mark an unsupported effort control as unavailable, not as an invented setting.
+   `Launch: <command> · <model | explicit owner-selected model policy> · <effort>`
+   `Why: <reason>; lower: <option> — <risk | reason comparison is unavailable>.`
+5. **Keep evidence separate:** requested settings, effective settings when observable, delivery, outcome, and material rework. Provider restrictions are honored; unobserved effective settings stay unknown. Rationale is in dispatch/owner launch advice, never the command-only first message. Correct the next launch by the failure cause, not by role name, provider analogy, or completion alone.
+
+Provider-specific rosters and controls belong to the owning adapter or current native inspection, never this core rule.
+
+### Provider-native evidence
+
+Coordination capability is admitted per provider and native surface, never by analogy or by combining
+partial receipts:
+
+1. **P0 documentation:** identify the native address, send, readback, wait and title mechanisms.
+2. **P1 one operation:** demonstrate one bounded addressed operation and exact readback.
+3. **P2 readback:** reconstruct source, destination, role, task/phase and immutable authority.
+4. **P3 checkpoint series:** demonstrate activation, status/gate return, continuation and role
+   return without a relay or prohibited edge.
+5. **P4 end-to-end trial:** one native TFW trial proves all required edges, isolation, role ownership,
+   correction continuity and final task-state reconstruction together.
+
+Missing a stage, translated documentation, provider switching, separate demonstrations or a partial
+receipt does not admit the provider. Resource limits may bound use but never prove reliability.
+
+Historical `CL`, `AG`, `AT`, `LEAD`, `GATEWAY`, `Autonomous from` and `G1`–`G8` records remain readable at their
+original epochs but are not current controls and are never newly issued.
+
+## 8) Workflows
+
+TFW defines the following canonical workflows in `.tfw/workflows/`:
+
+| Workflow | Role | Purpose |
+|----------|------|---------|
+| [init.md](workflows/init.md) | Coordinator | Initialize a project or attach/repair an adapter without resetting state |
+| [plan.md](workflows/plan.md) | Coordinator | Frame → HL → research → TS; route existing work by state |
+| [research/base.md](workflows/research/base.md) | Researcher | Structured investigation → RES artifact (pipeline or standalone) |
+| [handoff.md](workflows/handoff.md) | Executor | Context load → ONB → execute → RF |
+| [review.md](workflows/review.md) | Reviewer | Read RF → checklist → verdict → debt disposed → traces |
+| [docs.md](workflows/docs.md) | Coordinator | Qualify selected technical reference and decisions |
+| [knowledge.md](workflows/knowledge.md) | Coordinator | Qualify selected human-sourced knowledge |
+| [release.md](workflows/release.md) | Coordinator | Prepare project-defined release effects; publication needs separate authority |
+| [update.md](workflows/update.md) | Coordinator | Fetch upstream → compare versions → categorize changes → update checklist → re-sync adapters |
+| [config.md](workflows/config.md) | Coordinator | Interactive config change → propagate to all inline values |
+
+## 9) Tool Adapter Pattern
+
+`.tfw/` is the tool-agnostic core — one copy per project. Each development tool reads its own entry point, which references `.tfw/`:
+
+```
+CLAUDE.md + .claude/commands/tfw-*.md ──→ Claude `/tfw-*` command routing
+.cursor/rules/tfw.mdc + .cursor/commands/tfw-*.md ──→ Cursor `/tfw-*` command routing
+.agents/rules/tfw.md ──→ Antigravity persistent project rule
+.agents/skills/tfw-{command}/SKILL.md ──→ Antigravity `/tfw-*` command routing
+AGENTS.md + .agents/skills/tfw-*/SKILL.md ──→ Codex `/tfw-*` command routing
+```
+
+Adapters are chosen at project init. See `.tfw/quickstart.md` for setup.
+
+**An adapter installs whole copies or marker-bounded blocks, and nothing of a third kind.** A
+whole copy — a command, a workflow, a rule file, a skill — is verified by `cmp` against its
+source. Where TFW content is merged into a **project-owned** file — the `TFW:CLAUDE` block in
+`CLAUDE.md`, the `TFW:CODEX` block in `AGENTS.md` — the managed text sits between
+`<!-- TFW:{NAME}:START -->` and `<!-- TFW:{NAME}:END -->` and is verified on that region alone.
+One rule governs every such block, in every adapter:
+
+| The target file… | The sync… |
+|---|---|
+| carries the markers | replaces the text between them and touches nothing outside |
+| does not exist | is created from the template, block included |
+| exists **without** markers | is **reported and left untouched** — the operator inserts the block once, and every later sync is mechanical |
+
+Appending a block to a file that already carries an unmarked, hand-written TFW section produces
+two sections that disagree; no adapter guesses where the content "probably is". Exactly one
+managed block per file. `update.md` Step 4 names which row is a copy and which is a block.
+
+For Codex, `/tfw-*` is the primary human-facing command contract. Root `AGENTS.md`
+provides always-on recognition and fallback routing; repository-local skills provide
+discoverability and progressive workflow loading. Skills are implementation, not a
+separate wrapper users must learn. Adapter source lives in `.tfw/adapters/codex/` and
+installed copies live in `.agents/skills/tfw-*/`.
+
+### Command entry and evidence boundary
+
+Every `/tfw-*` entry follows one satisfiable pre-action sequence, regardless of adapter
+layout:
+
+1. Discover the command receiver at the adapter's declared route.
+2. Reach the command's one canonical workflow; a dispatching receiver reads it completely,
+   while a full-copy receiver begins with its byte-identical content.
+3. Bind that workflow's declared Role Lock before any task reasoning, question, decision,
+   tool call, or durable write.
+4. Execute the workflow's Read Contract in its listed order without an adapter-owned preload
+   or reordering.
+5. Obey the workflow's gates and stops; the receiver supplies no alternative algorithm.
+6. At the canonical stop, name the next workflow only by its `/tfw-*` route.
+
+The canonical workflow alone owns task effects, branching, templates, gates, and stops. A
+receiver may copy or dispatch it but cannot summarize those decisions into a second
+algorithm. The manifest remains tooling-only copy/check metadata and is never runtime role
+authority.
+
+Claims about this sequence use six non-substitutable evidence levels:
+
+| Level | Claim proved | Required observation |
+|---|---|---|
+| R0 — source presence | an instruction exists at its named source | source inspection at a named revision |
+| R1 — receiver parity | the runtime-facing copy equals its source | byte comparison or resolved identical content |
+| R2 — invocation | the runtime selected the command receiver | tool/event trace for that invocation |
+| R3 — complete load | the canonical workflow content entered the run | completed full-read trace, or invoked exact full-copy content |
+| R4 — later conformance | later effects followed the applicable role, order, gate, and stop | observed events plus the complete artifact diff |
+| R5 — controlled comparative effect | one entry design changes adherence relative to another | predeclared repeated trials and an uncertainty interval |
+
+A higher level is never inferred from a lower one: presence or clean-receiver parity does not
+prove invocation, load, later conformance, or comparative effect. Declaration, tracked-copy
+presence, installed state, clean-receiver reproduction, and live-host observation are also
+reported separately.
+
+## 10) Context Selection
+
+The applicable root instructions are already active. For a TFW command, read its canonical
+workflow completely; that workflow alone owns the ordered read contract for its checkpoints.
+
+1. Read the selected task or phase `status.md` and `journal/` before derived, shared, or
+   historical material.
+2. Read only the task artifacts, shared-rule ranges, templates, and PV/knowledge items named
+   by the current checkpoint. A triggered task fact may add a read; it never becomes permanent
+   common preload.
+3. Address a shared range by unique heading. A missing or duplicate addressed heading is a
+   hard stop: report the file and heading rather than guessing a range.
+4. Classify every full-file or repeated edge by checkpoint purpose and authority. An
+   unclassified full `conventions.md`, `glossary.md`, or `KNOWLEDGE.md` edge is prohibited.
+5. Generated manifests and read audits report the contract; they are never authority and no
+   role reads them as an instruction source.
+
+Skills and adapter roots dispatch commands and enforce only what must hold before a workflow
+can be opened. They do not restate the workflow's algorithm or independently preload shared
+files.
+
+## 10.1) Fact Categories
+
+> Universal categories for Fact Candidates. Open list — agents can use custom categories when none fit.
+
+| Category | Scope | Examples |
+|----------|-------|----------|
+| `environment` | Where the work lives | servers, tools, platforms, classrooms, labs, hosting |
+| `process` | How work gets done, business processes | schedules, approvals, reporting cadence, grading cycles |
+| `stakeholder` | Who needs what | priorities, pain points, expectations, quotes, key decisions |
+| `constraint` | What limits exist | contractual obligations, regulatory deadlines, resource caps, technical limits |
+| `convention` | Agreed standards | naming, style, format, language, tone |
+| `domain` | Subject matter knowledge | revenue patterns, client segments, market metrics, business rules, curriculum |
+| `context` | Background that shapes decisions | market conditions, competitive landscape, regulatory changes, prior decisions |
+| `risk` | Known dangers | client concentration, market dependency, knowledge silos, fragile dependencies |
+| `philosophy` | Values, principles, vision | design rationale, methodology beliefs, north star decisions, "why we do it this way" |
+
+## 10.2) Knowledge Infrastructure
+
+| File | Purpose |
+|------|---------|
+| `KNOWLEDGE.md` | Stable entry, architecture/reference map and preserved legacy/source routes; no maintained inventory/counts |
+| `knowledge/{category}.md` | Retained legacy topic meaning and source identities; no forced conversion or later marker rewrite |
+| `knowledge/records/` | Independently addressable qualified human knowledge and technical/reference decisions; one record form |
+| Existing role/stage sections | First capture surface, owned by the actual producing role at its checkpoint/return |
+| `.tfw/templates/knowledge/handover.md` | Minimal task-local fallback only when existing sources cannot carry a real return |
+| `.tfw/workflows/knowledge.md`, `.tfw/workflows/docs.md` | Existing human-knowledge and technical/reference qualification owners, respectively |
+| Existing `.tfw/knowledge_state.yaml` and processed markers | Preserved inert historical evidence; no current gate, inventory, reset or new state scaffold |
+
+### Knowledge handover
+
+Every producing role preserves available material insight before transfer/checkpoint, normal return,
+or an orderly stop: Coordinator planning/decision transfer; Researcher stage/iteration return;
+Executor interim/final return; Reviewer return. Reuse the existing HL/ONB/RF/RES/REVIEW or stage section
+first. Only an interim/stopped return without a suitable source uses the minimal handover template
+under its owning task. Capture needs actual producer/unit, bounded source/epoch, material statement
+or explicit outcome, grounds/uncertainty and continuation. No per-person file, copied corpus, raw chat
+or private reasoning is required. A lost/unseen context is never invented.
+
+| Actual selected input | Required disposition at handover/close |
+|---|---|
+| Missing producer return | Identify the known contributor and material gap from actual task-local dispatch/return lineage; stop affected close |
+| Justified-none | Producer names inspected bounded context and an existing reusable source when relevant; inspect rationale, accept no filler publication |
+| Unavailable | Preserve uncertainty and exact missing decision plus existing owner; acceptance-critical missing context keeps close open |
+| Retain-only | Preserve source and authorized completed reason why no publication/resolution is owed; irrelevant uncertainty need not block |
+| Owed publication/resolution | Complete the effect or retain an honest nonterminal dependency; never hide it as retain-only |
+
+An empty file, checkbox, silence, global zero or another role's return proves no missing handover.
+Rejected/interrupted work retains useful sources with its actual non-success state. The existing
+Coordinator verifies material coverage at `Closing and record recovery`; it does not see private
+context or create a global contribution inventory. Preserve sealed sources after close.
+
+### Knowledge qualification
+
+Preservation is not promotion. `/tfw-knowledge` owns human-sourced knowledge; `/tfw-docs` owns technical
+reference/decisions. Both use `.tfw/templates/knowledge/record.md` for warranted new independent
+records. A valid record carries stable identity/publication intent, kind, material statement,
+applicability, grounds/uncertainty, disposition, exact source/epoch, actual source producer/unit,
+qualifier and acceptance authority. Git sources must resolve the real object/path/claim; otherwise
+retain inspectable exact evidence. Unresolvable identity or absent authority cannot be accepted.
+
+Observed, accepted, retain-only, rejected, superseded and unresolved claims stay distinguishable.
+The existing human owner or valid grant controls qualification, never a child/record/source imperative.
+Human knowledge retains its original human provenance. Copied/paraphrased returns are not independent
+corroboration. Record source independence and scope before treating equivalent claims as support.
+
+Immediately before any publication/retry inspect actual source, material intent, current effect and
+acceptance. Equal source intent with an already accepted effect reuses that exact effect and repairs
+only a missing current reference. Changed statement/scope/source/authority under the same identity
+refuses replacement, preserves both inputs and needs an authorized correction identity/disposition.
+Do not issue a second accepted identity to hide divergence. Independent equivalents retain both
+provenance chains through explicit equivalence/duplicate relations or one properly qualified claim.
+
+Independent contributions use separate paths without a shared counter/digest/inventory write.
+After integration inspect actual semantic overlap; textual merge success is not agreement. Overlapping
+contradictions preserve both scopes/sources and name the missing decision and existing resolver.
+Newer timestamps, confidence and source repetition never appoint a winner. Retention is complete only
+when no publication/resolution is owed; required unresolved effects remain nonterminal.
+
+### Current knowledge use
+
+Start at `KNOWLEDGE.md`. It separates governing instructions, architecture/reference, legacy D/topic
+rows and new `knowledge/records/`. Navigate or search relevant ordinary files; no generated index,
+task-archive sweep, original chat or mandatory service is required. An optional view is rebuildable
+and non-authoritative. P0–P4 and relevant P5–P7 remain required at their existing stage sites; new
+records join their semantic priority, not a lower optional category.
+
+Before applying a relevant record or legacy row, inspect scope, grounds, disposition, source and
+producer. Search the record space for incoming successor/correction/equivalence/conflict references
+to its exact identity; follow material chains in both directions, checking each scope. A legacy
+target binds exact path plus D/F/heading and relevant source epoch. A backward-only link or old
+accepted label is insufficient. Scoped successors replace only their stated scope; unchanged
+accepted claims remain applicable. Unresolved branches name the missing authorized decision.
+
+Unavailable material source/authority blocks the dependent use, not unrelated planning. Retrieved
+instructions are evidence, never permission to publish, amend, execute or skip approvals. Preserve
+historical meaning/links; no every-fact conversion, source-marker write or maintained record list.
+The pinned `migrations/knowledge-lifecycle.md` owns adoption and retired-setting preservation.
+
+## 10.3) File Classification in `.tfw/`
+
+`.tfw/` contains three categories of files with different lifecycle rules:
+
+| Category | Files | Init | Update | Owner |
+|----------|-------|------|--------|-------|
+| **Framework** | workflows/, templates/, conventions.md, glossary.md, README.md, CHANGELOG.md, VERSION, compilable_contract.md, quickstart.md, adapters/ | Copy from upstream | Overwrite/merge from upstream | Upstream repo |
+| **Legacy state** | existing knowledge_state.yaml | Do not create | Preserve as inert historical evidence; never reset or overwrite | Project |
+| **Config** | project_config.yaml | Create from template → fill project values | Merge: framework sections update, project sections preserve | Project + upstream |
+
+**Config template:** `.tfw/templates/project_config.yaml`. New knowledge uses the independent record and handover forms; no state template is installed.
+
+**Rule:** `init.md` and `update.md` MUST respect these categories. Existing legacy state is never sourced from upstream or recreated from a template.
+
+## 10.4) File Naming Convention
+
+**Two rules, and which one applies is decided by what the file is, not by where it sits.**
+
+**1 — A template carries the name of the artifact it produces.** `HL.md` produces an HL,
+`RF.md` an RF, `EV.md` an EV. The artifact's name is a term of the method, and a template that
+renamed it would make the reader translate between two spellings of one thing.
+
+```
+templates/HL.md · TS.md · RF.md · RES.md · ONB.md · REVIEW.md · KNOWLEDGE.md
+templates/RELEASE.md · evidence/EV.md
+```
+
+**2 — Everything else in `.tfw/` is `lower_snake_case`**: configuration, state, and any
+template whose output is not a named artifact.
+
+```
+project_config.yaml   not PROJECT_CONFIG.yaml
+knowledge_state.yaml  not KNOWLEDGE_STATE.yaml
+templates/status.md · journal/event.md · team/profile.md · knowledge/topic.md
+templates/research/1_briefing.md   numeric prefix where stage order is part of the name
+```
+
+Uppercase remains reserved for project-root documents — `README.md`, `KNOWLEDGE.md`,
+`AGENTS.md` — and for `.tfw/` framework docs, `CHANGELOG.md` and `VERSION`.
+
+**A template mirrors its output directory:** `templates/journal/event.md` → `{task}/journal/<name>.md`.
+
+## 11) Quality Standard (no compromises)
+
+- No placeholders.
+- Results must be usable without manual edits.
+- If a result is wrong — fix the prompt/context and retry until quality is met.
+- Tasks are atomic and human-verifiable.
+- **Content Language:** Template structure (headings, labels, field names) is always English.
+  Artifact content is filled in the language specified by `tfw.content_language` in project_config.yaml.
+  Default: `en`. Agent MUST check this value before writing artifacts.
+
+### Design Rules
+
+- **Token density:** workflow instructions ≤1400 words. A ceiling is not a target or permission to
+  remove meaning; templates own format and workflows reference templates.
+- **Workflow vocabulary:** Phase = task unit; Step = ordered workflow action; Stage = cognitive
+  subprocedure; Gate follows the canonical definition in [Coordination](#7-coordination).
+- **Inline enforcement**: enforcement-critical values MUST be inline (Pattern A: defaults + config key). Pure refs (Pattern B) = broken
+- **DNA/Library**: Role Lock + Mindset = always inline. Reference data = via ref-inside-step. Step self-contained, ref adds precision
+- **Progressive Disclosure**: load only the current checkpoint's inputs in its workflow's read order.
+- **A command written into a workflow must survive its adapter.** No `$0`–`$9` and no `$ARGUMENTS` in any
+  shell or `awk` snippet a role runs: adapters may substitute them before the role reads the command.
+  Use named variables or literal examples and exercise the command once from the project root before
+  shipping it.
+
+## 12) Safety and Execution Honesty
+
+- Never claim something was "run" or "tested" outside the observed session and recorded evidence.
+- Never request secrets in plain text. Use environment variables.
+- Evidence requires real-environment observation — deploying, opening, running, or viewing completed work in conditions beyond the build/test toolchain. VERIFIED status requires the observed deciding values in the EV row.
+
+### Working material
+
+Working material is what a role makes for its own work and is neither result nor selected trace:
+raw output, logs, exports, screenshots, archives, copies and helper scripts. The role that needs it
+creates it in the system temporary directory of its own environment (`$TMPDIR`, else `/tmp`, on
+POSIX; `%TEMP%` on Windows) under `tfw/<task or Daily record ID>/`, never in the project. It stays
+private to that role: no other role relies on it, a trace names at most `<temp>/tfw/<ID>/`, it holds
+no link into the project, and its removal follows no link. The creating role removes it when its
+work ends, or names at its return what it keeps and why; `Closing and record recovery` step 6
+removes what remains and records what it could not.
+
+### Comments
+
+In a value file — code, tests, configuration, prompts, templates — a comment exists only when it
+carries value for that file's reader or a program reads it. Program-read comments are interpreter
+and encoding lines, tool directives, license headers and TFW managed-block markers. Reader value
+includes what a setting means, the instruction a template gives and, in a docstring a program
+publishes, what the reader of that output needs. Comments are not a channel: no messages to other
+agents, excuses, deferred-work notes, legacy chatter, jokes or notifications, and none of these
+moves into names, strings or docstrings. The reason for a decision lives in the trace.
+
+## 13) Trace Discipline
+
+Every formal Full task produces an **RF file** with results, decisions and observations, a **`status.md`** carrying its live state, and a **`journal/`** recording the events that moved it. Together with its task-local artifacts, these form the project's memory across sessions — and because each lives inside its own task, two tasks can advance without their traces colliding. Local Daily work uses its selected receiving-project record under `Formal Full task scope and local Daily work`; it cannot claim a Full lifecycle verdict.
+
+Debt found in a review is part of that trace and lives in the REVIEW that found it, disposed of before the task closes. There is no project-level debt registry: debt is bounded strictly to task review traces.
+
+Reverting a result does not revert its trace. Preserve a rejected task's folder and records even when its output is removed.
+
+## 14) Anti-patterns (prohibited)
+
+### Authority and role
+
+- Material work starts before its prerequisites, blocking questions, approved authority or exact scope
+  are resolved.
+- A role creates or changes artifacts outside its Role Lock; an Executor changes HL, TS, RES,
+  REVIEW, scope, architecture not authorized by HL or out-of-TS files, including “bonus fixes”.
+- A Coordinator writes Executor artifacts or delivery code, or closes delivery without an
+  independent REVIEW.
+- A frozen HL changes without its valid amendment verdict, or a proposal and its ruling become one act.
+- Research recommendations do not distinguish refinement from amendment, or a remark in an artifact,
+  review or chat is treated as a verdict.
+- An agent extends its own delegation to accept scope or budget overrun, rules its own proposal, or
+  substitutes delegated attribution for human-rooted accountability.
+- A Phase HL introduces a second vision, acceptance contract, failure contract or set of principles.
+
+### Value and assurance
+
+- A TS precedes HL approval or prescribes implementation instead of an observable result;
+  implementation starts without approved governing HL/TS; research starts from an uncommitted HL.
+- Evidence is reconstructed after the fact; RF omits test results or material observations; an
+  evidence status lacks the required observable artifact, oracle, justification or blocker.
+- A Reviewer approves without opening the delivered output and checking RF/evidence claims against
+  reality, the approved contract and the North Star.
+- A checklist, citation, firing rate, changed-file count or historical defect count becomes a quality
+  objective without a named protected subject, harm and material consequence.
+- A task closes with an undisposed observation, debt or finding, or with a disposition that names no
+  existing phase/round and cited condition.
+- Work is left unfinished because it can be called debt, a comment is used as a channel, or a
+  parallel project/task debt registry is introduced.
+
+### State and trace
+
+- A workflow uses a derived index instead of the selected task's `status.md`, or infers identity from
+  a username, host, folder or account display.
+- A task directory moves to express state or change its creation-year partition, or an identifier is
+  allocated from a corpus-wide counter or another task.
+- A journal event is edited or deleted, copies artifact/chat bodies instead of referencing them, or an
+  unknown status is silently normalized.
+- A per-user file or working material is stored in the shared tree.
+- Broad staging mixes sibling work, an unrelated landing hides its producer, or a whole-tree restore
+  overwrites later recorded state.
+- A workflow command contains `$0`–`$9` or `$ARGUMENTS`.
+
+### Coordination and revision
+
+- A foreign caller resumes “last” instead of the exact returned unit, or a relay, hidden helper,
+  invalid address or foreign parent substitutes for the recorded route.
+- Claimed delegation lacks its immutable human-rooted, child-only scope and exact destination.
+- An Executor initiates its own workflow, or a phase Coordinator routes through an ancestor/task
+  Coordinator instead of its recorded parent.
+- A rung-2 finding goes only to the Executor, or a REVISE item names no breached acceptance criterion
+  or frozen claim.
+
+## 15) Role Lock Protocol
+
+Each workflow declares a **🔒 ROLE LOCK** at the top. The agent MUST refuse any action outside the locked role.
+
+These locks and separate-role artifacts apply to formal Full workflow work. Each listed
+role may additionally write only its own task-local numeric economics contribution,
+typed capture-failure receipt or pre-extraction binding-gap disposition in its existing
+artifact as TRACE under the common contract; this does not permit another
+role's artifact, product code or lifecycle decision. The optional Daily
+worker has only its bounded human-request authority outside that corpus; it must not cross an
+active formal task's lock or use a local record to waive Full duties.
+
+**Acceptance authority is named here, not only in the workflow that exercises it.** Deciding whether
+new work exists belongs to the Coordinator; a reviewer that ruled it would be deciding the
+consequences of its own findings. For rung 1, the Coordinator records an acceptance ruling in the
+live REVIEW but authors no implementation order: the approved TS remains governing. The complete
+recipient/artifact/state contract is owned by `The 🔄 REVISE route` in §5.
+
+| Workflow | Role Lock | Permitted Artifacts | Forbidden Artifacts |
+|----------|-----------|---------------------|---------------------|
+| `init.md` | Coordinator | RES, RF, project config files | HL, TS, code |
+| `plan.md` | Coordinator | HL, TS, `research/iterations.yaml`, acceptance rulings appended to a live REVIEW | ONB, RF, RES, REVIEW creation/proposals, code |
+| `research/base.md` | Researcher | RES, research/ stage files | HL, TS, ONB, RF, REVIEW, code |
+| `handoff.md` | Executor | ONB, RF, code | HL, TS, RES, REVIEW |
+| `review.md` | Reviewer — **marks and proposes**; the **Coordinator** holds acceptance authority over dispositions and rules them once at the close of review (Step 6) | review stage files (map.md, verify.md, judge.md), REVIEW, proposed dispositions | ONB, RF, HL, TS, code, **disposition rulings** |
+| `docs.md` | Coordinator | selected KNOWLEDGE.md reference ranges, technical records, current effect reference | code, human-knowledge promotion, historical source edits |
+| `knowledge.md` | Coordinator | selected human-knowledge records and current qualification reference | code, technical decisions, legacy/source/state rewrites |
+| `release.md` | Coordinator | selected release artifacts and explicitly authorized project release effects | unrelated code |
+| `update.md` | Coordinator | `.tfw/` files, adapter copies | code |
+| `config.md` | Coordinator | project_config.yaml, workflow files, convention files, adapter copies | code |
+
+### Hard Stop Rule
+
+Return through the recorded route under `Coordination`, not directly to the owner unless the
+selected reporting mode requires it. A role boundary stops that unit from doing the next role's
+work; it does not revoke an authorized Coordinator's launch mandate.
+
+| Completed checkpoint | Next route | Current unit must not |
+|---|---|---|
+| Coordinator: TS approved | `/tfw-handoff` | execute the TS |
+| Executor: RF complete | `RF_READY` to own Coordinator, which selects the authorized `/tfw-review` act | write REVIEW or dispatch Reviewer |
+| Researcher: RES complete | `/tfw-plan` | write HL or TS |
+
+When a Reviewer reaches a final verdict for this review round, **record the proposed next act
+and its addressee in REVIEW**, together with the applicable details below:
+1. On ✅ APPROVE — record the independent verdict and authorized KNW transition, then return to the
+   Coordinator for `Closing and record recovery`. The Reviewer never runs project qualification or declares DONE;
+   it remains available for independent assessment of affected final claims
+2. On 🔄 REVISE — record that the items are **proposals**, their count, and `/tfw-plan` as the
+   Coordinator act to rule the round. Do not move lifecycle, rule a bound, or
+   dispatch an Executor; the Coordinator applies `The 🔄 REVISE route` in §5
+3. On ❌ REJECT — record which of §5's three destinations applies: (a) 📝 HL_DRAFT, (b) 🔬 RES, or
+   (c) 🟡 TS_DRAFT
+4. **Do NOT fix anything yourself** — a reviewer that repairs its own findings has reviewed nothing
+
+After the correct durable verdict/state write, the Reviewer preflights the exact `coordinator_route`
+and immutable REVIEW ref, then sends `REVIEW_READY` using the [catalogue](#closed-message-catalogue). A wrong route,
+stale ref, narrative payload or unresolved send outcome is a hard stop; it is not repaired by sending
+a second semantic decision.
+
+When a Coordinator receives work returned by a 🔄 REVISE, the correct action is:
+1. Rule all proposals once and apply the exact case in `The 🔄 REVISE route` in §5
+2. Name the table's next recipient and governing artifact; dispatch only when that case permits it
+3. **Do NOT execute the round yourself** — ruling/ordering is not doing
+
+## 16) Compilable Contract
+
+> Build-time specification for deterministic compilation of TFW artifacts into documentation.
+> Defines the Source Manifest, Reference Format, and Output Structure.
+> Full contract: [compilable_contract.md](compilable_contract.md)

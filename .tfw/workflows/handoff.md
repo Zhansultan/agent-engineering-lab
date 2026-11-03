@@ -1,0 +1,131 @@
+---
+description: TFW Handoff — executor onboarding, implementation, RF
+---
+
+# TFW Handoff — Task Execution by Executor
+
+> 🔒 **ROLE LOCK: EXECUTOR.** Write ONB, implementation, evidence and RF only. Never write or modify
+> HL, TS, RES or REVIEW, rule scope, or review your result. A scope defect is recorded in ONB and
+> stops execution.
+
+## Read Contract
+
+Root instructions are active. Read this workflow, then inputs in order; shared ranges use unique
+headings.
+
+| Order | Input | Checkpoint purpose | Authority |
+|---|---|---|---|
+| 1 | selected phase/task `status.md` and `journal/` | current state, authority, lineage | task-local |
+| 2 | master/phase HL and highest approved TS | frozen purpose and one governing order | governing artifacts |
+| 3 | live REVIEW only on REVISE; then TS-referenced artifacts | ruled return and declared inputs | governing artifacts |
+| 4 | `.tfw/project_config.yaml` → `tfw.scope_budgets` | VALUE triggers and authority ceiling | config |
+| 5 | `.tfw/conventions.md` headings `Task control files`, `Session identity`, `Artifact file naming`, `Task Statuses`, `Safety and Execution Honesty`, `Anti-patterns (prohibited)` | state, identity, lifecycle, evidence, prohibitions | shared rule |
+| 6 | HL §7.2 citations and TS-named implementation files | inherited decisions and facts | named source |
+| 7 | `.tfw/templates/ONB.md`, `.tfw/templates/evidence/EV.md`, `.tfw/templates/RF.md` | forms, each only at its gate | template |
+
+Never reload root or full common libraries. On REVISE, add only highest TS, live REVIEW and changed
+lineage; do not reread unchanged authority in the same session. Missing/duplicate headings stop.
+
+## Identity, activation, and returned work
+
+After state resolves, apply `Session identity` with `WORK=EXEC`. Apply root activation/routing before
+analysis. Current work requires a complete matching spine and approved Executor/TS gate. Verify cited
+delegation/dispatch; owner-direct work invents no principal. Record provenance in ONB/RF and return
+only to `coordinator_route`. Never write or self-answer `gate_answer`.
+
+At this task-bound activation/resumption, bind the Executor's exact native
+source, range and declared task/role identity under `.tfw/economics/README.md`.
+Its Full outcomes permit own numeric JSONL, an actual capture-failure receipt or
+an attributable pre-extraction binding gap in ONB/RF as TRACE; no other role's artifact.
+
+Resolve current `reporting`/`selection_ref` with the existing five-field compatibility rule.
+Only effective owner-transfer changes return transport; manual creation does not. On a
+non-revoking switch keep this same Executor, its valid activation and pending gates. A new role's
+first message is only the exact command; its address may be learned from receipt or first normal
+gate. Current Codex mutation uses a separate worktree; an explicitly selected shared-local provider
+route serializes one mutation owner and holds Executor writes during fixed-Candidate review.
+
+For REVISE, accept exactly one ruled case:
+
+- **Rung 1:** lifecycle `RF`; unchanged approved TS plus the Coordinator's closed bound appended to
+  live REVIEW. No TS sibling.
+- **Any rung 2:** lifecycle `TS_DRAFT`; highest approved `TS…__rev{N}.md` governs the whole round.
+- **Rung 3:** only a valid resolved owner verdict under `HL Contract` rule 8 may leave an executable
+  bound; otherwise stop.
+
+Read cited findings/rulings. State, recipient and artifacts must match the case. Pending Coordinator
+items, rung 2 without revised TS, or unresolved rung 3 stop. Do not redo accepted work or unaffected
+evidence. Append numbered round sections to ONB/RF; TS/REVIEW use revision siblings.
+
+At use/return gates apply `Current knowledge use` and `Knowledge handover`: preserve source/epoch,
+producer unit, inspected scope, material or justified-none, uncertainty, recipient and continuation.
+
+## Step 1 — ONB
+
+1. Read the governing artifacts and relevant implementation.
+2. Analyze blockers, recommendations, risks, spec/code inconsistencies and missing facts. Verify each
+   HL §7.2 citation in ONB §7 and add only genuinely relevant missed PV sources.
+3. Open the ONB template. Emit `ONB__{ID}.md` or
+   `ONB__phase-{x}__{phase_slug}.md`; on return append the numbered touched sections.
+4. Commit ONB alone. Before every commit apply `Exact-path staging`: inspect full status and cached
+   names, stage explicit full paths, and use `git commit --only -- <paths>`. Never use broad staging
+   or commit foreign dirt.
+5. Set lifecycle `ONB` from `TS_DRAFT`, or from `RF` for rung 1, and append a phase/task-local
+   `handoff` event using one clock reading and a drawn four-hex token. Persist ONB and the required
+   state/event before signalling. No path outside this task/phase changes.
+6. Use the [closed message catalogue](../conventions.md#closed-message-catalogue). A blocking
+   question sends `GATE_REQUIRED` to `coordinator_route`; WAIT for a valid authority-owned
+   `gate_answer` or governing approved revision, then cite its operational effect on continuation.
+   With no blocker send `ONB_READY` and continue under valid activation/approved TS without waiting
+   for acknowledgement or a second permission.
+
+## Step 2 — Implement and prove
+
+Before each implementation write, compare the path with the approved VALUE selector and protected
+boundaries. Only forecast VALUE logical files/touched text LOC count toward decomposition; TRACE,
+ASSURANCE and non-value DERIVED do not. The owner-approved plan is immutable. Stop before an added
+VALUE path, protected-boundary change, growth from applicable planned zero, or forecast at/above the
+owner multiplier. Below it, only a prospective Coordinator ruling inside unchanged boundaries may
+admit a necessary constituent.
+
+7. Implement every authorized local action with production-ready content. For dependent ACs, pass
+   the prerequisite first. Stop through `coordinator_route` if required work exceeds authority.
+8. Emit the EV from its template. Run TS-required targeted/full checks, raw output in working
+   material, each observation in its row when made. Reuse evidence only when inputs/output,
+   oracle/authority and environment assumptions still apply; rerun changed or uncertain dependencies.
+9. **Build/compile check.** Pass the configured checks. Repair failures inside approved scope;
+   a missing decision follows the blocking route. Do not proceed to RF with an unresolved failure.
+10. After all VALUE/ASSURANCE work and checks pass, commit the first tested implementation descendant;
+    its full SHA is Candidate. Confirm all changed paths are approved VALUE+ASSURANCE or authorized
+    task-local TRACE. Later TRACE/ASSURANCE/non-value DERIVED does not move Candidate; later VALUE
+    does and requires recomputation. Keep Candidate reachable through review/landing.
+    Record requested/effective launch settings, delivery and material rework separately; unobserved
+    effective settings stay unknown. Identify task-owned resources and owner/disposition for the
+    Coordinator's safe close; remove your working material before returning, or name what you keep
+    and why.
+11. Add Candidate to each EV row and exactly one accounting row: TS approval, full Baseline/Candidate,
+    literal membership/actions/classes/reasons, numeric additions/deletions/touched LOC, binary N/A,
+    deviations, trigger disposition, immutable-denominator authority/timing and the unchanged
+    NUL-safe command. Missing/mutable/late contract facts are BLOCKED; N/A means truly inapplicable.
+
+## Step 3 — RF and stop
+
+12. **Pre-RF template check.** Open the RF template and read every heading before writing RF;
+    resolve missing required content before the role return.
+13. Emit `RF__{ID}.md` or `RF__phase-{x}__{phase_slug}.md`; append numbered touched sections on
+    return. Fill all mandatory sections, bind Candidate/approval/accounting/authority, point §5 to EV
+    with verdict counts, and write explicit empty §7–§9 declarations. Observations include only
+    consequential unmodified issues and an allowed type.
+14. Apply the common Full outcomes at this final durable role return: validate and preserve
+    own numeric JSONL or an actual failure receipt with file/revision/SHA-256 and resolvable
+    bytes; a required pre-extraction binding gap belongs in RF with the common facts/reasons.
+    State the finite cutoff and coverage. Nonmeasurement is never measured zero and cannot
+    replace an explicit measurement deliverable or required product proof.
+15. Set lifecycle `RF` and append a valid `transition` event with one clock reading. Preserve the
+    exact Candidate, evidence, economics contribution and limitations in RF. After RF/state/event
+    are durable, send `RF_READY` to `coordinator_route` under the catalogue; the Coordinator reads
+    the records and selects the next authorized act. Explicit owner-transfer uses its selected
+    manual route without claiming a native send.
+
+**End this Executor invocation.** Never write REVIEW, dispatch/brief the Reviewer, or enter another
+role. The same Executor remains available for an authorized correction.

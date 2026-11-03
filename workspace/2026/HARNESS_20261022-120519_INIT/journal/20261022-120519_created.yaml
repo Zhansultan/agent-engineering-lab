@@ -1,0 +1,13 @@
+event: created
+at: 20261022-120519
+token: 671f7052183a7adca58464ac5879b248
+on_behalf_of: zhansultan-abenov
+via: claude-code
+refs:
+  workflow: .tfw/workflows/init.md
+  framework_version: "3.9.2"
+notes: |
+  Full TFW initialization for Agent Engineering Lab project.
+  Project purpose: Learn harness architecture (context gathering, model calling,
+  structured output parsing, tool calling) using local Ollama models.
+  Course: Innoforce Agent Engineering.

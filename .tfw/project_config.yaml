@@ -1,0 +1,118 @@
+# TFW Project Configuration
+# Fields marked <- PROJECT: set during init, preserved during update
+# Fields marked <- FRAMEWORK: updated by tfw-update from upstream
+
+project:                              # <- PROJECT: set during init
+  name: agent-engineering-lab
+  repo: innoforce/agent-engineering-lab
+  branch: main
+
+tfw:
+  version: "3.9.2"                    # <- FRAMEWORK: updated by tfw-update
+  upstream: "https://github.com/saubakirov/trace-first-starter"  # <- FRAMEWORK
+  installed_from: "v3.9.2"            # <- PROJECT: set by each update
+  content_language: ru                # <- PROJECT: set during init
+
+  task_containers: [workspace]        # <- PROJECT: set during init
+
+  id_format: "{PREFIX}_{YYYYMMDD}-{HHMMSS}_{ABBR}"  # <- FRAMEWORK
+  legacy_id_format: "{prefix}-{seq}"  # <- FRAMEWORK: readable, never issued
+  task_prefix: HARNESS                # <- PROJECT: current and legacy prefix
+
+  scope_budgets:                      # <- PROJECT: managed by /tfw-config; preserve on update
+    decomposition_trigger_files: 50
+    decomposition_trigger_loc: 5000
+    owner_escalation_multiplier: 2
+
+  templates:                          # <- FRAMEWORK: updated by tfw-update
+    hl: .tfw/templates/HL.md
+    ts: .tfw/templates/TS.md
+    res: .tfw/templates/RES.md
+    rf: .tfw/templates/RF.md
+    onb: .tfw/templates/ONB.md
+    review: .tfw/templates/REVIEW.md
+    knowledge: .tfw/templates/KNOWLEDGE.md
+    release: .tfw/templates/RELEASE.md
+
+  workflows:                          # <- FRAMEWORK: updated by tfw-update
+    plan: .tfw/workflows/plan.md
+    research: .tfw/workflows/research/base.md
+    handoff: .tfw/workflows/handoff.md
+    review: .tfw/workflows/review.md
+    docs: .tfw/workflows/docs.md
+    release: .tfw/workflows/release.md
+    update: .tfw/workflows/update.md
+    init: .tfw/workflows/init.md
+    knowledge: .tfw/workflows/knowledge.md
+    config: .tfw/workflows/config.md
+    economics: .tfw/workflows/economics.md
+
+  economics:
+    rate_cache: "~/.tfw/rates"
+    quote_fresh_days: 30
+
+  research:                           # <- FRAMEWORK: updated by tfw-update
+    max_web_queries_per_stage: 5
+    max_files_per_stage: 15
+    max_questions_per_turn: 3
+    max_passes: 3
+    min_iterations: 2
+    default_mode: focused
+    modes:
+      focused:
+        loops_per_stage: 1
+        verify_user_tech_claims: true
+      deep:
+        loops_per_stage: 3
+        verify_user_tech_claims: true
+        require_counter_evidence: true
+
+  statuses:                           # <- FRAMEWORK: updated by tfw-update
+    - id: TODO
+      emoji: "^"
+      description: "Task registered, work not started"
+    - id: HL_DRAFT
+      emoji: "~"
+      description: "HL being drafted or discussed"
+      role: coordinator
+    - id: RES
+      emoji: "?"
+      description: "Research in progress (optional)"
+      role: researcher
+    - id: PHASES
+      emoji: "#"
+      description: "Phases are running; each phase carries its own state"
+      role: coordinator
+    - id: TS_DRAFT
+      emoji: ">"
+      description: "TS written, awaiting approval"
+      role: coordinator
+    - id: ONB
+      emoji: ":"
+      description: "Onboarding report written; the executor is working toward the RF"
+      role: executor
+    - id: RF
+      emoji: "+"
+      description: "Execution complete, RF written"
+      role: executor
+    - id: REV
+      emoji: "*"
+      description: "Review in progress"
+      role: reviewer
+    - id: KNW
+      emoji: "="
+      description: "Knowledge capture (tfw-docs + tfw-knowledge)"
+      role: coordinator
+    - id: DONE
+      emoji: "!"
+      description: "Task closed"
+    - id: BLOCKED
+      emoji: "x"
+      description: "Blocked by dependency"
+    - id: REJECTED
+      emoji: "x"
+      description: "Closed unsuccessfully, terminal, trace retained"
+
+build:                                # <- PROJECT: set during init
+  lint: "node --check *.mjs"
+  test: "node preflight-v2.mjs"

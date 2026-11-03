@@ -1,0 +1,67 @@
+---
+description: "TFW — Trace-First Workflow conventions, lifecycle, and rules for this project"
+alwaysApply: true
+---
+
+# TFW
+
+This project follows Trace-First Workflow. Root instructions are already active; do not
+reload them. For `/tfw-*`, open `.cursor/commands/tfw-<command>.md`, then follow the mapped
+canonical workflow's Read Contract. The workflow selects all further inputs.
+
+At new-task Plan entry, before substantive framing or questions, report `provision · addressed send · wait/readback · title/readback` from the
+mechanisms exposed in the current Cursor surface, classifying each as `native`, `owner-assisted`, or
+`unavailable`. Loading one editor rule does not provision distinct addressable TFW role units.
+Treat provision and addressed send as owner-assisted, and wait/readback or title/readback as
+unavailable, unless the current surface exposes the exact mechanism and observable result. Never
+borrow another provider's capability or old receipt.
+
+This is an explicitly common-only adapter with no fourth Coordinator profile. At new-task entry
+show the shared startup card with current Cursor classifications and unknowns, and ask the initial
+operating mode; make no provider-tailored offer. Plan Step 5 validates and records the choice,
+reopening it only for an unresolved choice or material boundary change. Existing-task continuation
+preserves its settled choice. The card never belongs in a role's command-only first message.
+
+A command activates work only when its exact skill, task/phase and owner-direct,
+delegated or continuation source resolve. The command-only first message names the command and
+task/phase; native origin and task files supply the source. A workspace, role prompt, briefing, wait result or title is not
+activation. Read and validate the complete status routing spine before material work and report every
+status change to `coordinator_route`. Under `tfw-gates-only`, role units communicate materially only
+with their own Coordinator, never peers, owner. Record actual producer surface/address,
+parent route, activation/dispatch source and immutable authority. Iterative dialogue requires an
+exact immutable two-peer grant independent of task/phase topology. This common compatibility adapter
+has no fourth UX profile; report missing native mechanisms and exact owner action.
+For new work, one task Coordinator handles a one-phase task; long work uses distinct phase
+Coordinators with bounded upward returns. Historical GATEWAY/LEAD carriers remain readable,
+but a principal, title or host never supplies a route or mandate.
+Before sending on the selected strict edges, apply `.tfw/conventions.md` → `Closed message
+catalogue`: persist the owned record and required state/event, send only its permitted form, then
+read the referenced record/current authority before the dependent act. Research keeps its existing
+stage dialogue; owner–task Coordinator discussion stays substantive. The catalogue also owns the
+one-time status fallback, delivery/duplicate handling and unavailable route.
+
+Never open or resume another TFW role session, or inspect raw provider-wide state, session logs or
+unrelated task/chat history, to read its chat, reasoning, tool output, terminal or unreturned work.
+Monitor only through addressed TFW messages and exposed event/status/wait mechanisms. After an
+unchanged signal, back off; never poll on a short fixed timer or narrate unchanged state. A suspected
+stall permits one addressed status request, then is reported as unavailable or blocked. Under
+`tfw-gates-only`, do not harvest or relay another unit's unreturned reasoning, suspicions, prose or
+preferred solution.
+
+| Commands | Roles |
+|---|---|
+| `/tfw-plan`, `/tfw-docs`, `/tfw-knowledge`, `/tfw-release`, `/tfw-update`, `/tfw-config`, `/tfw-init`, `/tfw-economics` | Coordinator |
+| `/tfw-research` | Researcher |
+| `/tfw-handoff` | Executor |
+| `/tfw-review` | Reviewer |
+
+## Rules
+
+- **No sycophancy.** Be direct, precise, concrete.
+- **No placeholders.** All code and text must be production-ready.
+- **Language.** Reply in the user's latest message language.
+- **Working material and comments.** Keep raw output, logs, exports, screenshots and scratch
+  scripts in the system temporary directory under `tfw/<task or record ID>/`, never in the project,
+  and remove them when your work ends. A comment exists only when it carries value for its file's
+  reader or a program reads it, never as a note to agents, deferred work, history or an excuse
+  (`conventions.md` → `Working material`, `Comments`).

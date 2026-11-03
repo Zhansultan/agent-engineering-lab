@@ -1,0 +1,134 @@
+# TFW Project Configuration
+# Fields marked ← PROJECT: set during init, preserved during update
+# Fields marked ← FRAMEWORK: updated by tfw-update from upstream
+
+project:                              # ← PROJECT: set during init
+  name: my-project
+  repo: user/my-project
+  branch: main
+
+tfw:
+  version: "3.9.2"                    # ← FRAMEWORK: updated by tfw-update
+  upstream: "https://github.com/saubakirov/trace-first-starter"  # ← FRAMEWORK
+  # Actual source: {upstream}@{verified-tag}, or {upstream}@{full-commit-sha} for an
+  # explicitly authorized untagged source. `upstream` is the configured URL/symbolic name,
+  # never a machine-local path. An untagged source must not impersonate a published tag.
+  # Pin and record provenance through update.md; equal versions do not prove equal source
+  # or a completed update. `self` in the framework's own repository.
+  installed_from: "unrecorded"        # ← PROJECT: set by each update
+  content_language: en                # ← PROJECT: set during init
+
+  # Active task containers: CREATE in the first entry; discover current work across them.
+  # New projects use workspace without a container question. Preserve existing choices.
+  # Historical access for an existing project follows conventions.md and its update guide;
+  # a fresh project needs no historical setting or folder.
+  task_containers: [workspace]        # ← PROJECT: set during init
+
+  # Current identifier grammar. PREFIX and owner-approved ABBR are uppercase alphanumeric;
+  # neither may contain `_`, so the separators are unambiguous. The stamp comes from the
+  # system clock. Creation reads no counter and refuses an existing full identifier.
+  id_format: "{PREFIX}_{YYYYMMDD}-{HHMMSS}_{ABBR}"  # ← FRAMEWORK
+  legacy_id_format: "{prefix}-{seq}"  # ← FRAMEWORK: readable, never issued
+  task_prefix: PROJ                   # ← PROJECT: current and legacy prefix
+
+  scope_budgets:                      # ← PROJECT: managed by /tfw-config; preserve on update
+    # Soft VALUE-only decomposition prompts. They do not veto product quality.
+    decomposition_trigger_files: 50
+    decomposition_trigger_loc: 5000
+    # Bounds prospective Coordinator authority against the immutable owner-approved plan.
+    owner_escalation_multiplier: 2
+
+  templates:                          # ← FRAMEWORK: updated by tfw-update
+    hl: .tfw/templates/HL.md
+    ts: .tfw/templates/TS.md
+    res: .tfw/templates/RES.md
+    rf: .tfw/templates/RF.md
+    onb: .tfw/templates/ONB.md
+    review: .tfw/templates/REVIEW.md
+    knowledge: .tfw/templates/KNOWLEDGE.md
+    release: .tfw/templates/RELEASE.md
+
+  workflows:                          # ← FRAMEWORK: updated by tfw-update
+    plan: .tfw/workflows/plan.md
+    research: .tfw/workflows/research/base.md
+    handoff: .tfw/workflows/handoff.md
+    review: .tfw/workflows/review.md
+    docs: .tfw/workflows/docs.md
+    release: .tfw/workflows/release.md
+    update: .tfw/workflows/update.md
+    init: .tfw/workflows/init.md
+    knowledge: .tfw/workflows/knowledge.md
+    config: .tfw/workflows/config.md
+    economics: .tfw/workflows/economics.md
+
+  economics:
+    rate_cache: "~/.tfw/rates"  # Public provider/month quotes only; no usage portfolio
+    quote_fresh_days: 30        # Exact model/profile, including across month boundaries
+
+  research:                           # ← FRAMEWORK: updated by tfw-update
+    max_web_queries_per_stage: 5
+    max_files_per_stage: 15
+    max_questions_per_turn: 3
+    max_passes: 3
+    min_iterations: 2
+    default_mode: focused
+    modes:
+      focused:
+        loops_per_stage: 1
+        verify_user_tech_claims: true
+      deep:
+        loops_per_stage: 3
+        verify_user_tech_claims: true
+        require_counter_evidence: true
+
+  statuses:                           # ← FRAMEWORK: updated by tfw-update
+    - id: TODO
+      emoji: "⬜"
+      description: "Task registered, work not started"
+    - id: HL_DRAFT
+      emoji: "📝"
+      description: "HL being drafted or discussed"
+      role: coordinator
+    - id: RES
+      emoji: "🔬"
+      description: "Research in progress (optional)"
+      role: researcher
+    - id: PHASES
+      emoji: "🧩"
+      description: "Phases are running; each phase carries its own state"
+      role: coordinator
+    - id: TS_DRAFT
+      emoji: "🟡"
+      description: "TS written, awaiting approval"
+      role: coordinator
+    - id: ONB
+      emoji: "🟠"
+      description: "Onboarding report written; the executor is working toward the RF, re-entry after a 🔄 REVISE included"
+      role: executor
+    - id: RF
+      emoji: "🟢"
+      description: "Execution complete, RF written"
+      role: executor
+    - id: REV
+      emoji: "🔍"
+      description: "Review in progress"
+      role: reviewer
+    - id: KNW
+      emoji: "📚"
+      description: "Knowledge capture (tfw-docs + tfw-knowledge)"
+      role: coordinator
+    - id: DONE
+      emoji: "✅"
+      description: "Task closed"
+    - id: BLOCKED
+      emoji: "❌"
+      description: "Blocked by dependency"
+    - id: REJECTED
+      emoji: "❌"
+      description: "Closed unsuccessfully, terminal, trace retained"
+
+build:                                # ← PROJECT: set during init
+  lint: echo "configure your lint command"
+  test: echo "configure your test command"
+# Set lint and test to real commands during init. A placeholder means the executor's
+# build gate in handoff.md verifies nothing.

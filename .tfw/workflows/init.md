@@ -1,0 +1,195 @@
+---
+description: TFW Init — initialize TFW or attach/repair one adapter
+---
+
+# TFW Init — Project Initialization
+
+> **Role:** Coordinator
+> **Output:** configured TFW project and first task, or one repaired adapter
+
+> **🔒 ROLE LOCK: COORDINATOR**
+> Permitted: TFW setup/config/adapters and the init task's RES/RF. Forbidden: HL, TS, unrelated
+> code, project-purpose replacement, and state reset.
+
+## Read Contract
+
+Read this workflow completely, then select inputs in order. Full common libraries and unselected
+adapters are not inputs.
+
+| Order | Input | Checkpoint purpose | Authority |
+|---|---|---|---|
+| 1 | `.tfw/`; `.tfw/project_config.yaml` → `tfw.task_containers`, `tfw.historical_containers`; task `status.md`/`journal/` | route full-init or attach/repair across the reference union | filesystem/config/task-local |
+| 2 | `.tfw/adapters/manifest.yaml` and selected adapter sources/targets | exact repair mapping and preservation | manifest/receiver |
+| 3 | full-init only: root README, receiver `.tfw/README.md`, project docs/structure/build/people/process | discovery and purpose preservation | project/receiver |
+| 4 | templates for config, knowledge entry/record/handover, profile, status, journal | output forms | templates |
+| 5 | `.tfw/conventions.md` → `Identifier`, `Session identity` | identity and naming | shared rule |
+| 6 | selected research/knowledge/RF forms at their gates | init research and result | workflows/templates |
+
+Missing or duplicate task containers, unresolved manifest rows, ambiguous adapter selection, or a
+purpose collision that evidence cannot settle are hard stops.
+
+## Activation and routing checkpoint
+
+Apply the active root activation/routing contract before discovery or repair and require exact
+owner-direct `/tfw-init` activation. Full init has no prior status: the first status records this
+Coordinator's complete routing spine and paired `reporting: native-gates` / `selection_ref: baseline`.
+Attach/repair validates existing task routing when task-bound and adds the pair only after verifying
+the actual initial human source and frozen ceiling; it never guesses delegation, owner-transfer,
+legacy or partial fields.
+
+At Full init's first task binding or task-bound attach/repair, bind this
+Coordinator's exact native source range and select
+`.tfw/economics/README.md`. Taskless adapter repair creates no
+fictional economics task; the optional helper never gates setup.
+
+## Step 0 — Route Before Discovery
+
+**Detect Full Init vs Adapter Attach/Repair** before reading broad project context.
+
+- **Full init:** `.tfw/` was acquired as clean framework content through quickstart; no receiver
+  config/state or active/historical traces exist. Continue. Never treat upstream live config as a template.
+- **Attach/repair:** receiver configured state exists, including historical-only traces while active
+  paths are empty. Inspect the deduplicated active-plus-historical reference union using whole IDs;
+  report malformed paths or ID collisions, never infer a fresh project from missing modern statuses.
+  Preserve all state; skip discovery, research,
+  config creation, and init-task creation. Select the adapter explicitly when it cannot be inferred,
+  read `Workflow activation and routing` only when repairing its persistent coordination block,
+  run the Core Economics and Daily prewrite gates below before any repair write, apply its persistent row and all manifest command rows, then apply/check
+  any accepted Daily group. Verify bytes/blocks, roles, paths, idempotence, foreign neighbors and unchanged
+  configured state; report applied/preserved/refused paths, then stop. Never jump to discovery or research.
+
+Never reset an existing project or guess its adapter. Contradictory source/receiver ownership stops
+before config/state writes. An existing root or `.tfw/README.md` is not a blank starter surface.
+
+### Daily prewrite gate
+
+Without explicit Daily opt-in, exclude Daily writes and create no discovery entry; an unrelated skill
+never selects it. With opt-in, before any setup/repair write load `.tfw/extensions/daily-task/installation.md` from one pinned
+coherent source. Classify canonical/template/selected entry targets against prior source and current
+authority. Preserve compatible local forms, records and unselected/foreign neighbors. Customized or
+ambiguous ownership refuses the whole Daily group unchanged; independent Full repair may continue.
+After classification, apply only accepted rows and verify selected source/target bytes, receiving-root
+canonical resolution, preservation and repeat/no-diff separately from Full. Report evidence level and
+applied/preserved/refused paths in the setup result; no ownership registry. Full init
+runs this gate before Step 2 writes and applies accepted rows with adapters at Step 4; repair runs it
+inside Step 0 before its terminal stop.
+
+## Step 1 — Discover and Interview
+
+### Core Economics prewrite gate
+
+Before setup/repair writes read the pinned `migrations/economics-core.md` when an old optional
+installation exists or the core transition is incomplete, including equal-version re-entry.
+Economics workflow/numeric/template/config and selected manifest entries are a default connected
+group. Classify all destinations against verified prior source/provenance and current authority;
+custom/ambiguous old canonical/entries or shared dependencies refuse dependent writes unchanged.
+Preserve history, chosen compatible cards/forms and unrelated neighbours. Exclude legacy
+`extensions/economics/` and optional aliases from generic copying; use only the explicit migration
+dispositions. Verify new core resolution/parity and stable repeat at Step 4 or before repair's stop.
+Standard Economics does not select Daily. Record source SHA, hashes, applied/preserved/retired/
+refused paths and evidence level; no ownership registry or native proof from a copy.
+
+**Interview + Mini-Setup** applies only to full init; attach/repair has no second interview.
+
+For full init, inspect purpose, docs, structure, process, people, conventions, build/tests, dependencies,
+release procedure when present, and project language. Ask whether tutorial explanations are wanted. Ask
+at most three questions per message until the owner approves task prefix, completion checks, adapter(s),
+content language, greenfield/brownfield constraints, and the first task title/acronym. Never invent an
+acronym apart from an approved title.
+
+## Step 2 — Mini-Setup
+
+Resolve the acting human before writing. Preserve existing project-owned purpose and state:
+
+### Receiver North-Star operation
+
+| Receiver state | Operation |
+|---|---|
+| Existing root `README.md` | `PRESERVE_BYTES` |
+| Current receiver `.tfw/README.md` | `CLASSIFY_BY_PURPOSE_AND_AUTHORITY` |
+| Framework-owned current `.tfw/README.md` | `REPLACE_AFTER_VERIFY` |
+| Customized/project-purpose/frozen-citation `.tfw/README.md` | `PRESERVE_TO_ATTACHMENT_THEN_REPLACE` |
+| Absent project North Star | `CREATE_FROM_DISCOVERY` |
+| Starter quotation | `DO_NOT_INJECT` |
+
+The root `README.md` remains project-owned. For an existing `.tfw/README.md`, resolve the installed
+purpose/authority designation before deciding whether current framework values may replace it. Preserve
+customized, project-purpose-bearing, or frozen-citation bytes at the content-addressed destination
+`.tfw/update_receipts/legacy-readme/<full-sha256>/README.md` before replacement; the receipt records
+the observed designation and current readers use that exact path for historical meaning. An unresolved
+purpose stops for one material question or a concrete next action rather than silently preserving or
+replacing.
+
+1. Create project config and clean knowledge entry/forms from templates, never upstream live state.
+   Create no `.tfw/knowledge_state.yaml` or obsolete state scaffold.
+   Default active paths to `[workspace]` without asking a container question; honor an explicit custom
+   path. Create no historical key, historical folder, or archive scaffold. New config uses only
+   `decomposition_trigger_files: 50`, `decomposition_trigger_loc: 5000`, and
+   `owner_escalation_multiplier: 2` under `tfw.scope_budgets`.
+2. Create `team/` with one approved human profile; never create an agent-session profile.
+3. Create the first configured task container and a direct root README route to method, knowledge,
+   releases, and one selected trace. Create no catalogue/cache/status page.
+4. Read the clock once and create `{container}/{YYYY}/{PREFIX}_{stamp}_{ABBR}`. Collision stops for a
+   different owner-approved abbreviation; do not retry time or add a suffix.
+
+### Project-owned release procedure
+
+If the project has `RELEASE.md`, preserve it and read its established contract. If it has no release
+procedure, leave it absent; ordinary initialization does not create a starter release policy. A later
+explicit release request receives a bounded planning route for the missing decision.
+
+### Session identity checkpoint
+
+Full-init: after-item4/before-item5. Apply `WORK=INIT` and the created task identifier.
+Attach/repair: skip this checkpoint. Navigation is not authority and no identity is inferred from OS, Git,
+provider, model, or folder.
+
+5. From the status/event templates, create lifecycle `RES` state and one `created` event using a drawn
+   opaque token, human `on_behalf_of`, tool `via`, and valid refs.
+6. Verify semantic YAML, task state/event contracts, absent retired runtime/prose keys, no receiver
+   Python/PyYAML prerequisite, and project-owned files unchanged.
+
+## Step 3 — Research Gate
+
+Announce and run `/tfw-research` inside the init task. Preserve its stages and RES. Focus on architecture,
+decisions, dependencies, domain terms, debt, conventions, and the project's own release procedure when
+one exists. Wait wherever the research workflow waits.
+
+## Step 4 — Full Setup
+
+1. Merge the managed TFW block into root `AGENTS.md`; never overwrite project-owned text.
+2. Create `KNOWLEDGE.md` from its clean template and approved research findings.
+   Keep its stable ordinary-file entry and record-directory route; create no invented facts or
+   maintained inventory. Use the record/handover forms only when an actual qualified claim or
+   necessary fallback exists. Preserve human versus technical qualification and source authority.
+3. Install selected adapters from the manifest's persistent row and exact manifest command records. Preserve
+   unrelated/unmarked content; reject missing/extra routes, duplicate blocks, drift, or second-run diff.
+   Confirm the pinned Full economics group has the numeric files and core workflow under
+   `.tfw/economics/`, `.tfw/workflows/economics.md` and `.tfw/templates/economics.md`. A repeated
+   install leaves identical bytes stable and preserves customized/conflicting
+   receiver files and all prior task-local economics records.
+4. Offer `.user_preferences.md`, add it to `.gitignore` when accepted, and never commit it.
+5. Finalize project config while preserving its selected active paths; do not re-copy source config.
+   Set the init task lifecycle to `RF` with the required event.
+
+## Step 5 — Verify, RF, and Close
+
+Verify core/config/root files, state, RES, knowledge choice, selected adapter roots, exact routes/roles/
+bytes, idempotence, literal `/tfw-*` routes, VERSION/config agreement, direct setup postconditions, and
+configured build commands. Write RF from its template with findings, decisions, files, and observed
+verification. Check actual producing-role handovers and completed dispositions through `Knowledge handover`;
+for task-bound work also validate this Coordinator's own bounded economics
+JSONL or typed failure receipt and return its resolvable file/revision/hash.
+no unrelated history/count gate applies. Include the three selected `coordinator.md` payload paths
+and exact Plan-time discovery; Cursor remains common compatibility without a fourth profile. A
+repeated install must produce no new diff and preserve unrelated marker-bounded root content.
+After independent review and applicable knowledge effects, close with `DONE` and a filled outcome;
+stop with `/tfw-plan`.
+
+## Anti-patterns
+
+- full init over configured state;
+- guessed interview values, adapter, identity, time, or acronym;
+- project-state reset, purpose overwrite, or root-file replacement;
+- file-existence-only adapter verification;
+- RF/DONE without research, review, evidence, and required closure effects.

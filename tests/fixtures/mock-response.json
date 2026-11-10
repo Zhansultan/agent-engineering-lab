@@ -1,0 +1,33 @@
+{
+  "textResponse": {
+    "message": {
+      "role": "assistant",
+      "content": "[MOCK] This is a test response"
+    },
+    "model": "mock",
+    "done": true,
+    "_mock": true
+  },
+  "toolCallResponse": {
+    "message": {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "function": {
+            "name": "list_directory",
+            "arguments": "{\"path\": \".\"}"
+          }
+        }
+      ]
+    },
+    "model": "mock",
+    "done": true,
+    "_mock": true
+  },
+  "errorResponse": {
+    "message": null,
+    "model": "mock",
+    "done": false
+  }
+}

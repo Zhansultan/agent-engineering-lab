@@ -1,0 +1,13 @@
+{
+  "name": "harness-sandbox",
+  "version": "0.1.0",
+  "settings": {
+    "maxFileSize": 8192,
+    "allowedExtensions": [".txt", ".md", ".json"],
+    "readOnly": true
+  },
+  "testData": {
+    "secretWord": "anthropic",
+    "magicNumber": 42
+  }
+}

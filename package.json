@@ -1,0 +1,27 @@
+{
+  "name": "agent-engineering-lab",
+  "version": "0.1.0",
+  "description": "Educational harness for understanding AI agent architecture",
+  "type": "module",
+  "main": "harness.mjs",
+  "scripts": {
+    "start": "node server.mjs",
+    "cli": "node harness.mjs",
+    "test": "node --test tests/unit/harness.test.mjs tests/unit/recovery.test.mjs tests/unit/executor.test.mjs",
+    "test:integration": "node --test tests/integration/ollama.test.mjs",
+    "test:all": "node --test tests/unit/ tests/integration/",
+    "preflight": "node preflight-v2.mjs"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "harness",
+    "ollama",
+    "education"
+  ],
+  "author": "Жансултан Абенов (@zhabenov)",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

@@ -1,0 +1,20 @@
+Meeting Notes - 2024-10-20
+
+Participants: Alice, Bob, Charlie
+
+Agenda:
+1. Project status review
+2. Next sprint planning
+3. Technical decisions
+
+Discussion:
+- Alice presented harness architecture
+- Bob suggested using mock mode for testing
+- Charlie will prepare integration tests
+
+Action Items:
+- [ ] Complete Phase A.1 by Friday
+- [ ] Review event logging format
+- [ ] Test web UI on different browsers
+
+Next Meeting: November 15, 2024 at 14:00

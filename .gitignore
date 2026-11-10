@@ -14,3 +14,9 @@ Thumbs.db
 
 # TFW temporary working material
 /tmp/tfw/
+
+# Harness runtime output
+/logs/*
+!/logs/.gitkeep
+/workspace_files/*
+!/workspace_files/.gitkeep

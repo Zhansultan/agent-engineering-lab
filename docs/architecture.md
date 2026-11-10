@@ -24,8 +24,11 @@
 |-----------|-------------------|
 | Вызов модели | Ответ совпадает по смыслу с ручным curl |
 | Tool definitions | Модель выбирает правильный инструмент |
-| Executor | Выполняет действие, возвращает результат |
+| Executor (read) | Выполняет чтение sandbox, возвращает результат |
+| Executor (write) | Создаёт/редактирует файлы в workspace |
+| Executor (command) | Выполняет bash-команды с blacklist |
 | Sandbox | Отклоняет пути за пределами разрешённой папки |
+| Workspace | Изолированная область для записи |
 | Цикл | Модель получает результат и отвечает пользователю |
 
 ## Стек
@@ -48,36 +51,73 @@
 
 ```
 agent-engineering-lab/
-├── docs/                    # Архитектура и решения
-│   ├── architecture.md      # Этот файл
-│   ├── request-flow.md      # Путь запроса со схемой
-│   └── components.md        # Границы компонентов
+├── harness.mjs              # CLI entry point
+├── server.mjs               # Web server entry point
+├── lib/                     # Core modules
+│   ├── context.mjs          # Context Builder
+│   ├── client.mjs           # HTTP Client (mock + Ollama)
+│   ├── parser.mjs           # Response Parser
+│   ├── executor.mjs         # Tool Executor
+│   ├── recovery.mjs         # JSON Recovery Parser
+│   └── events.mjs           # Event Logger
+├── web/                     # Web UI
+│   ├── index.html           # UI template
+│   └── app.js               # Frontend logic
+├── sandbox/                 # Read-only test files
+│   ├── project-note.md
+│   ├── config.json
+│   └── notes/
+├── workspace_files/         # Read/write area (model-created)
+├── logs/                    # Event logs
+│   └── events.jsonl
+├── docs/                    # Architecture documentation
+│   ├── architecture.md      # This file
+│   ├── request-flow.md      # Request path
+│   ├── components.md        # Component boundaries
+│   └── diagrams/            # C4 + UML diagrams
+├── tests/                   # Unit and integration tests
+│   ├── unit/
+│   └── integration/
 ├── .tfw/                    # TFW framework
-├── team/                    # Профили участников
-├── knowledge/               # Verified project knowledge
-├── workspace/               # Task traces
-├── preflight-v2.mjs         # Проверка среды
-├── CLAUDE.md                # Инструкции для Claude Code
-├── AGENTS.md                # Инструкции для агентов
-└── KNOWLEDGE.md             # Индекс знаний проекта
+├── CLAUDE.md                # Claude Code instructions
+└── KNOWLEDGE.md             # Project knowledge index
 ```
 
-## Связь с раздаткой курса
+## Возможности (Phase A.3+)
 
-Harness строится на основе `innoforce-model-lab-v5.zip`:
+### Read Tools (sandbox)
+| Инструмент | Описание |
+|------------|----------|
+| `list_directory` | Список файлов в папке |
+| `read_text` | Чтение текстового файла |
+| `find_files` | Поиск файлов по имени |
+| `search_text` | Поиск текста в файлах |
 
-| Раздатка | Harness |
-|----------|---------|
-| `requests/*.json` | Шаблоны запросов к модели |
-| `renderer/lab/tool.mjs` | Executor для tool calling |
-| `renderer/lab/sandbox/` | Тестовые файлы |
+### Write Tools (workspace)
+| Инструмент | Описание |
+|------------|----------|
+| `write_file` | Создать/перезаписать файл |
+| `edit_file` | Заменить текст в файле |
+| `list_workspace` | Просмотр workspace |
+| `read_workspace` | Чтение из workspace |
+| `run_command` | Выполнить bash-команду |
 
-## Открытые вопросы
+### Безопасность
+- **Sandbox**: только чтение, path validation
+- **Workspace**: изолированная запись, path traversal protection
+- **Commands**: blacklist опасных команд, timeout 10s, output limit 4KB
 
-1. Веб-интерфейс или только CLI?
-2. Как хранить историю диалога?
-3. Нужен ли streaming?
+## Интерфейсы
 
-## Следующий шаг
+| Интерфейс | Команда | Описание |
+|-----------|---------|----------|
+| CLI | `node harness.mjs "message"` | Терминальный режим |
+| Web UI | `node server.mjs` | Browser на localhost:3000 |
+| Tests | `node --test tests/` | Автоматические тесты |
 
-Реализовать минимальный цикл: запрос → модель → tool call → executor → ответ.
+## Режимы работы
+
+| Режим | Описание | Использование |
+|-------|----------|---------------|
+| Mock | Мгновенные тестовые ответы | Разработка, тесты |
+| Ollama | Реальная модель (qwen3.5:0.8b) | Демонстрация, эксперименты |

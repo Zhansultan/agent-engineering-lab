@@ -1,5 +1,19 @@
 # Agent Engineering Lab - Claude Code Rules
 
+## North Star
+
+**Человек понимает и контролирует архитектуру без погружения в детали реализации.**
+
+### Values
+- Прозрачность архитектуры до и после реализации
+- Многоуровневость для разных аудиторий (продакты, аналитики, инженеры, стейкхолдеры, инфраструктурщики)
+- Проверяемость: диаграммы соответствуют коду
+
+### Architecture Documentation
+- Методика: C4 + UML + Structurizr
+- Минимум диаграмм: component, class, state, activity, deployment, sequence
+- См. `docs/architecture-requirements.md`
+
 ## Project Identity
 - Name: agent-engineering-lab
 - Stack: Node.js, Ollama, JavaScript/TypeScript

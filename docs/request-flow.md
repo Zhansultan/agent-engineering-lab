@@ -14,26 +14,37 @@ sequenceDiagram
     participant M as Model (qwen3.5)
     participant E as Executor
     participant S as Sandbox
+    participant W as Workspace
 
     U->>H: Сообщение пользователя
-    H->>H: Собрать контекст (messages, tools)
+    H->>H: Собрать контекст (messages, tools[9])
     H->>O: POST /api/chat
     O->>M: Inference
     M->>O: Response (text или tool_calls)
     O->>H: JSON response
 
-    alt Есть tool_calls
+    alt Есть tool_calls (read)
         H->>E: execute(tool_call)
         E->>S: Проверить путь
         S-->>E: OK / Error
-        E->>S: Выполнить действие
+        E->>S: Выполнить чтение
         S-->>E: Результат
         E->>H: {role: "tool", content: ...}
-        H->>O: POST /api/chat (с результатом)
-        O->>M: Inference
-        M->>O: Финальный ответ
-        O->>H: JSON response
     end
+
+    alt Есть tool_calls (write)
+        H->>E: execute(tool_call)
+        E->>W: Проверить путь
+        W-->>E: OK / Error
+        E->>W: Записать файл / выполнить команду
+        W-->>E: Результат
+        E->>H: {role: "tool", content: ...}
+    end
+
+    H->>O: POST /api/chat (с результатом)
+    O->>M: Inference
+    M->>O: Финальный ответ
+    O->>H: JSON response
 
     H->>U: Ответ модели
 ```
@@ -86,12 +97,23 @@ Ollama загружает модель и выполняет inference.
 
 Если есть `tool_calls`, harness передаёт вызов в executor.
 
-### 6. Executor → Sandbox
+### 6. Executor → Sandbox / Workspace
 
-Executor проверяет:
+**Read tools (sandbox):**
 - Путь внутри sandbox (защита от path traversal)
 - Размер файла (≤ 8 КиБ)
 - Тип действия (только чтение)
+
+**Write tools (workspace):**
+- Путь внутри workspace (защита от path traversal)
+- Автоматическое создание директорий
+- Запись/редактирование файлов
+
+**Command execution:**
+- Blacklist опасных команд
+- Timeout 10 секунд
+- Output limit 4 КиБ
+- Working directory = workspace
 
 ### 7. Executor → Harness
 
@@ -120,8 +142,10 @@ Harness добавляет результат в messages и отправляе�
 | Harness | Сборка контекста, HTTP, разбор JSON |
 | Ollama | Управление моделями, inference |
 | Model | Генерация текста, выбор инструментов |
-| Executor | Выполнение инструментов, валидация |
-| Sandbox | Изоляция файловой системы |
+| Executor | Выполнение инструментов, валидация путей |
+| Sandbox | Изоляция для чтения (read-only) |
+| Workspace | Изоляция для записи (read-write) |
+| Shell | Выполнение команд с фильтрацией |
 
 ## Observability
 
